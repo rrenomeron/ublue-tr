@@ -1,0 +1,11 @@
+[Default Applications]
+x-scheme-handler/http=com.google.Chrome.desktop
+application/xhtml+xml=com.google.Chrome.desktop
+text/html=com.google.Chrome.desktop
+x-scheme-handler/https=com.google.Chrome.desktop
+
+[Added Associations]
+x-scheme-handler/http=com.google.Chrome.desktop;
+application/xhtml+xml=com.google.Chrome.desktop;
+text/html=com.google.Chrome.desktop;
+x-scheme-handler/https=com.google.Chrome.desktop;
