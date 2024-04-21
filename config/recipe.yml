@@ -26,7 +26,6 @@ modules:
       - libvirt
       - virt-manager
       - gnome-tweaks
-      - dconf-editor
       - neofetch
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-dash-to-dock 
@@ -66,6 +65,7 @@ modules:
         - org.darktable.Darktable
         - org.gnome.Weather
         - us.zoom.Zoom
+        - ca.desrt.dconf-editor
 
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
