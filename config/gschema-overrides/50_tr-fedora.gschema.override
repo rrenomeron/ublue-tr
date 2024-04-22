@@ -1,6 +1,6 @@
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'com.discordapp.Discord.desktop', 'com.spotify.Client.desktop', 'org.gnome.Software.desktop']
-enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com']
 
 [org.gnome.desktop.wm.preferences]
 button-layout=':minimize,maximize,close'
