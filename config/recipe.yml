@@ -76,4 +76,4 @@ modules:
 
   - type: gschema-overrides  # this sets up our dconf overrides
     include:
-      - zz1-tr-fedora.gschema.override
+      - 50_tr-fedora.gschema.override
