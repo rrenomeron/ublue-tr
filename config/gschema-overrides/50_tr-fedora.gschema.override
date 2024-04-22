@@ -1,6 +1,6 @@
 [org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'com.discordapp.Discord.desktop', 'com.spotify.Client.desktop', 'org.gnome.Software.desktop']
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com']
 
 [org.gnome.desktop.wm.preferences]
 button-layout=':minimize,maximize,close'
@@ -24,6 +24,7 @@ dock-position='BOTTOM'
 intellihide-mode='FOCUS_APPLICATION_WINDOWS'
 require-pressure-to-show=false
 transparency-mode='FIXED'
+disable-overview-on-startup=true
 
 [org.gnome.settings-daemon.plugins.media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
@@ -40,5 +41,8 @@ color-scheme='prefer-dark'
 
 
 [org.gtk.Settings.FileChooser]
-sort-directories-first = true
-startup-mode = 'cwd'
+sort-directories-first=true
+startup-mode='cwd'
+
+[org/gtk/gtk4/settings/file-chooser]
+sort-directories-first=true
