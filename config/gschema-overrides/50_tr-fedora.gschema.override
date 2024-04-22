@@ -1,14 +1,14 @@
-[org/gnome/shell]
+[org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'com.discordapp.Discord.desktop', 'com.spotify.Client.desktop', 'org.gnome.Software.desktop']
 enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com']
 
-[org/gnome/desktop/wm/preferences]
+[org.gnome.desktop.wm.preferences]
 button-layout=':minimize,maximize,close'
 
-[org/gnome/nautilus/icon-view]
+[org.gnome.nautilus.icon-view]
 default-zoom-level='small-plus'
 
-[org/gnome/nautilus/preferences]
+[org.gnome.nautilus.preferences]
 click-policy='single'
 default-folder-viewer='icon-view'
 migrated-gtk-settings=true
@@ -16,7 +16,7 @@ search-filter-time-type='last_modified'
 show-create-link=true
 show-delete-permanently=true
 
-[org/gnome/shell/extensions/dash-to-dock]
+[org.gnome.shell.extensions.dash-to-dock]
 background-opacity=0.75
 custom-theme-shrink=true
 dash-max-icon-size=48
@@ -25,15 +25,15 @@ intellihide-mode='FOCUS_APPLICATION_WINDOWS'
 require-pressure-to-show=false
 transparency-mode='FIXED'
 
-[org/gnome/settings-daemon/plugins/media-keys]
+[org.gnome.settings-daemon.plugins.media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
 
-[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+[org.gnome.settings-daemon.plugins.media-keys.custom-keybindings.custom0]
 binding='<Control><Alt>t'
 command='gnome-terminal'
 name='Open Terminal'
 
-[org/gnome/desktop/interface]
+[org.gnome.desktop.interface]
 clock-format='12h'
 clock-show-weekday=true
 color-scheme='prefer-dark'
