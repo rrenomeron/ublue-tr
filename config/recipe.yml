@@ -32,6 +32,7 @@ modules:
       - langpacks-en
       - nss-tools
       - code
+      - chromium
 
     remove:
       # example: removing firefox (in favor of the flatpak)
@@ -77,3 +78,7 @@ modules:
   - type: gschema-overrides  # this sets up our dconf overrides
     include:
       - 50_tr-fedora.gschema.override
+  - type: script
+    # We run this to put get our home CA in the system circle of trust
+    snippets:
+      - "update-ca-trust --extract"
