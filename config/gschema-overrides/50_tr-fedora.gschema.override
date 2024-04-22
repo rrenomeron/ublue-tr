@@ -3,7 +3,7 @@ favorite-apps=['org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'org.l
 enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com']
 
 [org/gnome/desktop/wm/preferences]
-button-layout=":minimize,maximize,close"
+button-layout=':minimize,maximize,close'
 
 [org/gnome/nautilus/icon-view]
 default-zoom-level='small-plus'
@@ -37,3 +37,8 @@ name='Open Terminal'
 clock-format='12h'
 clock-show-weekday=true
 color-scheme='prefer-dark'
+
+
+[org.gtk.Settings.FileChooser]
+sort-directories-first = true
+startup-mode = 'cwd'
