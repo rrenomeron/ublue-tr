@@ -32,6 +32,7 @@ modules:
       - langpacks-en
       - nss-tools
       - code
+      - google-chrome-stable
 
     remove:
       # example: removing firefox (in favor of the flatpak)
