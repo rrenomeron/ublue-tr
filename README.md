@@ -1,8 +1,9 @@
-# ublue-tr
+# Rich Renomeron's Experimental Build of Fedora Silverblue
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
-
-After setup, it is recommended you update this README to describe your custom image.
+This is a [Universal Blue](https://universal-blue.org)-based image built via [BlueBuild](https://bulue-build.org)'s 
+tools with a bunch of my personal preferences baked in. Currently, it's a way for me to experiment with an 
+Immutable Operating System and adapt it to my (non-work) workflows.  Or to adapt my personal workflows to The Way of
+the Container. In the future, it might become the standard install for my personal devices.
 
 ## Installation
 
@@ -30,14 +31,24 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
-## ISO
+## Installing via ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+You can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).  Or, just install Fedora Silverblue and follow the instructions above.
 
 ## Verification
+> **Warning**  
+> This is still boilerplate from the original template.  It might not be accurate; I haven't verified it.
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
 cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 ```
+
+## TODO
+
+- Find a way, any way, to get the Google Chrome RPM installed instead of relying on the Flatpak.  (The usual way
+  of putting the Chrome RPM onto an immutable OS is because of [a bug in RPM](https://github.com/rpm-software-management/rpm/issues/2577)).  The current best guess is to run it out of toolbox, but need a way to make sure that particular container is available for all users, complete with a "just works" ``.desktop`` file and default browser integration.
+- Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
+- Borrow carefully curated features from [Bluefin](https://github.com/ublue-os/bluefin)
+- Figure out how to set up a Fedora 40 image with this repo, while continuing to have Fedora 39 around in case we want to back out
