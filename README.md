@@ -48,7 +48,7 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 ## TODO
 
 - Find a way, any way, to get the Google Chrome RPM installed instead of relying on the Flatpak.  (The usual way
-  of putting the Chrome RPM onto an immutable OS is because of [a bug in RPM](https://github.com/rpm-software-management/rpm/issues/2577)).  The current best guess is to run it out of toolbox, but need a way to make sure that particular container is available for all users, complete with a "just works" ``.desktop`` file and default browser integration.
+  of putting the Chrome RPM onto an immutable OS doesn't currently work because of [a bug in RPM](https://github.com/rpm-software-management/rpm/issues/2577)).  The current best guess is to run it out of toolbox, but need a way to make sure that particular container is available for all users, complete with a "just works" ``.desktop`` file and default browser integration.
 - Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
 - Borrow carefully curated features from [Bluefin](https://github.com/ublue-os/bluefin)
 - Figure out how to set up a Fedora 40 image with this repo, while continuing to have Fedora 39 around in case we want to back out
