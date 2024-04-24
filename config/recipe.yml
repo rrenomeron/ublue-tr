@@ -68,6 +68,11 @@ modules:
         - io.dbeaver.DBeaverCommunity
         - org.darktable.Darktable
         - org.gnome.Weather
+        - org.gnome.Evince
+        - org.gnome.Totem
+        - org.gnome.Loupe
+        - org.gnome.Snapshot
+        - org.gnome.baobab
         - us.zoom.Zoom
         - ca.desrt.dconf-editor
 
