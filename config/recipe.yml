@@ -32,6 +32,10 @@ modules:
       - langpacks-en
       - nss-tools
       - code
+      - google-roboto-mono-fonts
+      - google-roboto-fonts
+      - mozilla-fira-sans-fonts
+      - fira-code-fonts
 
     remove:
       # example: removing firefox (in favor of the flatpak)
