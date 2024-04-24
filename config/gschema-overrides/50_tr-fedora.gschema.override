@@ -29,12 +29,14 @@ disable-overview-on-startup=true
 clock-format='12h'
 clock-show-weekday=true
 color-scheme='prefer-dark'
+show-battery-percentage=true
+monospace-font-name='Fira Code 14'
 
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 startup-mode='cwd'
 
-[org/gtk/gtk4/settings/file-chooser]
+[org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
 
 [org.gnome.desktop.peripherals.touchpad]
