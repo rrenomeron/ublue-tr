@@ -1,11 +1,11 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-tr
+name: ublue-tr-40
 # description will be included in the image's metadata
 description: A Universal Blue Fedora-based image with my personal preference baked in
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 39 # latest is also supported if you want new updates ASAP
+image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module

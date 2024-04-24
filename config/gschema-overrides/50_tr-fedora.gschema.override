@@ -36,3 +36,6 @@ startup-mode='cwd'
 
 [org/gtk/gtk4/settings/file-chooser]
 sort-directories-first=true
+
+[org.gnome.desktop.peripherals.touchpad]
+tap-to-click=true

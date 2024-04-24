@@ -2,7 +2,7 @@
 
 This is a [Universal Blue](https://universal-blue.org)-based image built via [BlueBuild](https://bulue-build.org)'s 
 tools with a bunch of my personal preferences baked in. Currently, it's a way for me to experiment with an 
-Immutable Operating System and adapt it to my (non-work) workflows.  Or to adapt my personal workflows to The Way of
+Immutable Operating System and adapt it to my (non-work) workflows.  Or maybe to adapt my personal workflows to The Way of
 the Container. In the future, it might become the standard install for my personal devices.
 
 ## Installation
@@ -31,6 +31,9 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
+If you want to try Fedora 40, use ``ublue-tr-40`` as the image name.  Eventually this will become the
+regular image, once I determine Fedora 40 is stable enough and I've confident in the upgrade experience.
+
 ## Installing via ISO
 
 You can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso).  Or, just install Fedora Silverblue and follow the instructions above.
@@ -51,4 +54,4 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
   of putting the Chrome RPM onto an immutable OS doesn't currently work because of [a bug in RPM](https://github.com/rpm-software-management/rpm/issues/2577)).  The current best guess is to run it out of toolbox, but need a way to make sure that particular container is available for all users, complete with a "just works" ``.desktop`` file and default browser integration.
 - Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
 - Borrow carefully curated features from [Bluefin](https://github.com/ublue-os/bluefin)
-- Figure out how to set up a Fedora 40 image with this repo, while continuing to have Fedora 39 around in case we want to back out
+
