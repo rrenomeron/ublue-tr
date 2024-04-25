@@ -1,0 +1,83 @@
+modules:
+  - type: files
+    files:
+      - usr: /usr
+          # copies config/files/usr into your image's /usr.
+          # put configuration files you want in /etc/ on a booted system 
+          # in /usr/etc/ in the image. read more in files module reference.
+
+  - type: rpm-ostree
+    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://rrenomeron.github.io/ublue-tr/repos/vscode.repo      
+    install:
+      # - micro
+      # - starship
+      - libvirt
+      - virt-manager
+      - gnome-tweaks
+      - neofetch
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-dash-to-dock 
+      - langpacks-en
+      - nss-tools
+      - code
+      - google-roboto-mono-fonts
+      - google-roboto-fonts
+      - variety
+
+    remove:
+      # example: removing firefox (in favor of the flatpak)
+      # "firefox" is the main package, "firefox-langpacks" is a dependency
+      # - firefox
+      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        # - org.mozilla.firefox
+        # - org.gnome.Loupe
+        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+        # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
+        - com.google.Chrome
+        - com.discordapp.Discord
+        - com.github.tchx84.Flatseal
+        - org.gimp.GIMP 
+        - org.libreoffice.LibreOffice
+        - com.mattjakeman.ExtensionManager 
+        - com.nextcloud.desktopclient.nextcloud
+        - com.spotify.Client 
+        - org.audacityteam.Audacity org.sqlitebrowser.sqlitebrowser 
+        - org.openshot.OpenShot 
+        - io.dbeaver.DBeaverCommunity
+        - org.darktable.Darktable
+        - org.gnome.Weather
+        - org.gnome.Evince
+        - org.gnome.Totem
+        - org.gnome.Loupe
+        - org.gnome.Snapshot
+        - org.gnome.baobab
+        - us.zoom.Zoom
+        - ca.desrt.dconf-editor
+
+      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Installing different branches of the same Flatpak is not supported.
+      remove:
+        # - org.gnome.eog
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
+  - type: gschema-overrides  # this sets up our dconf overrides
+    include:
+      - 50_tr-fedora.gschema.override
+  - type: script
+    # We run this to put get our home CA in the system circle of trust
+    snippets:
+      - "update-ca-trust extract"
+  - type: bling
+    install:
+      - dconf-update-service
