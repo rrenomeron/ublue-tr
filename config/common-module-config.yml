@@ -23,6 +23,15 @@ modules:
       - code
       - google-roboto-mono-fonts
       - google-roboto-fonts
+      - google-crosextra-caladea-fonts
+      - google-crosextra-carlito-fonts
+      - cascadia-code-fonts
+      - sil-charis-fonts
+      - sil-charis-compact-fonts
+      - sil-andika-fonts
+      - sil-andika-compact-fonts
+      - fontawesome-fonts
+      - libreoffice-opensymbol-fonts
       - variety
 
     remove:
