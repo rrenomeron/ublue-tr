@@ -34,8 +34,7 @@ modules:
       - code
       - google-roboto-mono-fonts
       - google-roboto-fonts
-      - mozilla-fira-sans-fonts
-      - fira-code-fonts
+      - variety
 
     remove:
       # example: removing firefox (in favor of the flatpak)
