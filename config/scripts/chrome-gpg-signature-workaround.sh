@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+set -oue pipefail
 mkdir -p /tmp/chrome
 echo "Downloading Google Signing Key"
 curl https://dl.google.com/linux/linux_signing_key.pub > /tmp/chrome/linux_signing_key.pub
@@ -14,5 +14,6 @@ rpm -qa gpg-pubkey* --qf '%{NAME}-%{VERSION}-%{RELEASE} %{PACKAGER}\n' | grep 'l
 echo "Downloading and Verifying Google Chrome"
 curl https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm > /tmp/chrome/google-chrome-stable_current_x86_64.rpm
 rpm -K /tmp/chrome/google-chrome-stable_current_x86_64.rpm
+rpm -ivh --relocate /opt=/usr/opt /tmp/chrome/google-chrome-stable_current_x86_64.rpm
 
 echo "If you got this far, it's a success!"
