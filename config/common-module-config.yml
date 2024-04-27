@@ -24,7 +24,7 @@ modules:
       - google-roboto-fonts
       - google-crosextra-caladea-fonts
       - google-crosextra-carlito-fonts
-      #- liberation-fonts
+      - liberation-fonts
       - cascadia-code-fonts
       - sil-charis-fonts
       - sil-charis-compact-fonts

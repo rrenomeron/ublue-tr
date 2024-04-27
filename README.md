@@ -5,6 +5,17 @@ tools with a bunch of my personal preferences baked in. Currently, it's a way fo
 atomic operating system and adapt it to my (non-work) workflows.  Or maybe to adapt my personal workflows to The Way of
 the Container. In the future, it might become the standard install for my personal devices.
 
+The highlights:
+
+- Google Chrome RPM installed (albeit in a complicated manner) and set as default browser
+- Visual Studio Code RPM installed with Cascadia Code fonts
+- Libvirt/Virt-Manager installed on host
+- Variety wallpaper changer (installed as RPM for now)
+- Dash-to-Dock enabled by default, skipping Overview on login
+- Appindicators enabled by default
+- Clocks set to AM/PM view with Weekday Display
+- Curated selection of Flatpak apps
+
 ## Installation
 
 > **Warning**  
@@ -50,8 +61,9 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 
 ## TODO
 
-- Find a way, any way, to get the Google Chrome RPM installed instead of relying on the Flatpak.  (The usual way
-  of putting the Chrome RPM onto an atomic OS doesn't currently work because of [a bug in RPM](https://github.com/rpm-software-management/rpm/issues/2577)).  The current best guess is to run it out of toolbox, but need a way to make sure that particular container is available for all users, complete with a "just works" ``.desktop`` file and default browser integration.
+- Add more automation to managing Google Chrome, preferably by automatically re-layering it on reboot
+- Figure out how to signal user that a Chrome update is available/freshly layered
 - Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
-- Borrow carefully curated features from [Bluefin](https://github.com/ublue-os/bluefin)
+- Borrow (some more) carefully curated features from [Bluefin](https://github.com/ublue-os/bluefin)
+- Automate TPM whole-disk encryption (see https://github.com/bsherman/ublue-custom/blob/main/usr/bin/luks-enable-tpm2-autounlock)
 
