@@ -1,0 +1,10 @@
+#!/bin/bash
+
+CHROME_INSTALLED_VERSION=$(rpm -q --queryformat '%{VERSION}' google-chrome-stable)
+CHROME_DOWNLOADED_VERSION=$(cat /usr/share/ublue-tr/chrome-workarounds/google-chrome-current-version)
+
+if [ "$CHROME_INSTALLED_VERSION" == "$CHROME_DOWNLOADED_VESRION" ]; then
+    echo "Installed version of Google Chrome ($CHROME_INSTALLED_VERSION) is current"
+else
+    echo "Google Chrome needs an upgrade from $CHROME_INSTALLED_VERSION to $CHROME_DOWNLOADED_VERSION"
+fi

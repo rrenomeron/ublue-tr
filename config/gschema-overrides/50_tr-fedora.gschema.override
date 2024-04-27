@@ -1,5 +1,5 @@
 [org.gnome.shell]
-favorite-apps=['org.gnome.Nautilus.desktop', 'com.google.Chrome.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'com.discordapp.Discord.desktop', 'com.spotify.Client.desktop', 'org.gnome.Software.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.libreoffice.LibreOffice.writer.desktop', 'com.discordapp.Discord.desktop', 'com.spotify.Client.desktop', 'org.gnome.Software.desktop']
 
 [org.gnome.desktop.wm.preferences]
 button-layout=':minimize,maximize,close'
