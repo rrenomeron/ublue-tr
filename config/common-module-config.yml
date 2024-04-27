@@ -24,7 +24,7 @@ modules:
       - google-roboto-fonts
       - google-crosextra-caladea-fonts
       - google-crosextra-carlito-fonts
-      - liberation-fonts
+      #- liberation-fonts
       - cascadia-code-fonts
       - sil-charis-fonts
       - sil-charis-compact-fonts
@@ -32,7 +32,7 @@ modules:
       - sil-andika-compact-fonts
       - fontawesome-fonts
       - libreoffice-opensymbol-fonts
-      - variety      
+      - variety            
 
     remove:
       # example: removing firefox (in favor of the flatpak)
@@ -52,7 +52,7 @@ modules:
         # - org.gnome.Loupe
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
         # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
-        - com.google.Chrome
+        #- com.google.Chrome
         - com.discordapp.Discord
         - com.github.tchx84.Flatseal
         - org.gimp.GIMP 
@@ -88,7 +88,8 @@ modules:
     snippets:
       - "update-ca-trust extract"
     scripts:      
-      - chrome-gpg-signature-workaround.sh
+      - chrome-workaround-manual-install.sh
+    #  - chrome-workaround-fix-gpg-keys.sh
 
   - type: bling
     install:
