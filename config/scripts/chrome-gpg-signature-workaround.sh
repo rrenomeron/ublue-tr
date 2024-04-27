@@ -4,6 +4,7 @@ set -e
 mkdir -p /tmp/chrome
 echo "Downloading Google Signing Key"
 curl https://dl.google.com/linux/linux_signing_key.pub > /tmp/chrome/linux_signing_key.pub
+
 rpm --import /tmp/chrome/linux_signing_key.pub
 
 echo "collecting information on where rpm put the key for future reference"

@@ -36,6 +36,7 @@ modules:
       - fontawesome-fonts
       - libreoffice-opensymbol-fonts
       - variety
+      - /tmp/chrome/google-chrome-stable_current_x86_64.rpm
 
     remove:
       # example: removing firefox (in favor of the flatpak)
