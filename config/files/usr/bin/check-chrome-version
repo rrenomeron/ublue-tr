@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Check currently layered Chrome version against the latest that the CI process found.
+# Todo: If needed, layer automatically with rpm-ostree and inform the user so
+# they'll know to reboot to get the latest Chrome goodness.
+
 CHROME_INSTALLED_VERSION=$(rpm -q --queryformat '%{VERSION}' google-chrome-stable)
 CHROME_DOWNLOADED_VERSION=$(cat /usr/share/ublue-tr/chrome-workarounds/google-chrome-current-version)
 
