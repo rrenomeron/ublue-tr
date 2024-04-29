@@ -1,0 +1,13 @@
+modules:
+- type: files
+  files:
+  - dconf-bluefin: /usr/etc/dconf/db/local.d
+- type: default-flatpaks
+  system:
+    install:
+    remove:
+    # - org.gnome.eog
+    - org.mozilla.firefox/x86_64/stable
+    - org.mozilla.Thunderbird/x86_64/stable
+    - org.gnome.Maps/x86_64/stable
+    - org.gnome.Calendar/x86_64/stable
