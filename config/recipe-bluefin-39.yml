@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-tr-40
+name: bluefin-tr
 # description will be included in the image's metadata
 description: A Project Bluefin image with my personal preference baked in
 
