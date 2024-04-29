@@ -12,25 +12,17 @@ modules:
   #     - enable-chrome-yum-repo.sh
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://rrenomeron.github.io/ublue-tr/repos/vscode.repo
     install:
       # - micro
       # - starship
-      - libvirt
-      - virt-manager
-      - gnome-tweaks
       - neofetch
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-dash-to-dock 
       - langpacks-en
       - nss-tools
-      - code
       - google-roboto-mono-fonts
       - google-roboto-fonts
       - google-crosextra-caladea-fonts
       - google-crosextra-carlito-fonts
       - liberation-fonts
-      - cascadia-code-fonts
       - sil-charis-fonts
       - sil-charis-compact-fonts
       - sil-andika-fonts
@@ -38,7 +30,7 @@ modules:
       - fontawesome-fonts
       - libreoffice-opensymbol-fonts
       - variety
-      # - google-chrome-stable            
+      # - google-chrome-stable              
 
     remove:
       # example: removing firefox (in favor of the flatpak)
@@ -59,23 +51,17 @@ modules:
         # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
         # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
         #- com.google.Chrome
-        - com.discordapp.Discord
-        - com.github.tchx84.Flatseal
+        - com.discordapp.Discord        
         - org.gimp.GIMP 
-        - org.libreoffice.LibreOffice
-        - com.mattjakeman.ExtensionManager 
+        - org.libreoffice.LibreOffice        
         - com.nextcloud.desktopclient.nextcloud
         - com.spotify.Client 
         - org.audacityteam.Audacity org.sqlitebrowser.sqlitebrowser 
         - org.openshot.OpenShot 
         - io.dbeaver.DBeaverCommunity
         - org.darktable.Darktable
-        - org.gnome.Weather
-        - org.gnome.Evince
         - org.gnome.Totem
-        - org.gnome.Loupe
         - org.gnome.Snapshot
-        - org.gnome.baobab
         - us.zoom.Zoom
         - ca.desrt.dconf-editor
         # - google-chrome-stable
