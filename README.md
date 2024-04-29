@@ -1,20 +1,31 @@
-# Rich Renomeron's Experimental Build of Fedora Silverblue
+# Rich Renomeron's Experimental Builds of Fedora Silverblue and Project Bluefin
 
-This is a [Universal Blue](https://universal-blue.org)-based image built via [BlueBuild](https://bulue-build.org)'s 
+These are [Universal Blue](https://universal-blue.org)-based images built via [BlueBuild](https://bulue-build.org)'s 
 tools with a bunch of my personal preferences baked in. Currently, it's a way for me to experiment with an 
 atomic operating system and adapt it to my (non-work) workflows.  Or maybe to adapt my personal workflows to The Way of
 the Container. In the future, it might become the standard install for my personal devices.
 
-The highlights:
+Features common to both images:
 
 - Google Chrome RPM installed (albeit in a complicated manner) and set as default browser
-- Visual Studio Code RPM installed with Cascadia Code fonts
-- Libvirt/Virt-Manager installed on host
 - Variety wallpaper changer (installed as RPM for now)
-- Dash-to-Dock enabled by default, skipping Overview on login
-- Appindicators enabled by default
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps
+- ``<CTRL><ALT>t`` opens a terminal
+
+For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
+
+- Visual Studio Code RPM installed with Cascadia Code fonts
+- Libvirt/Virt-Manager installed on host
+- Dash-to-Dock enabled by default, skipping Overview on login
+- Appindicators enabled by default
+
+For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr``):
+
+- Default Fedora/GNOME keybindings and fonts
+- GNOME Terminal as default terminal
+
+We default to Fedora 39.  If you want Fedora 40, add ``-40`` to the image name (e.g ``ublue-tr-40``).
 
 ## Installation
 
@@ -61,9 +72,8 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 
 ## TODO
 
-- Add more automation to managing Google Chrome, preferably by automatically re-layering it on reboot
 - Figure out how to signal user that a Chrome update is available/freshly layered
 - Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
-- Borrow (some more) carefully curated features from [Bluefin](https://github.com/ublue-os/bluefin)
 - Automate TPM whole-disk encryption (see https://github.com/bsherman/ublue-custom/blob/main/usr/bin/luks-enable-tpm2-autounlock)
+- On Bluefin, enable rootless Docker by default
 

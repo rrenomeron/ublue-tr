@@ -4,8 +4,8 @@ name: ublue-tr-40
 description: A Project Bluefin image with my personal preference baked in
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin-dx:39
-image-version: 40 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: 39 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
