@@ -21,6 +21,7 @@ intellihide-mode='FOCUS_APPLICATION_WINDOWS'
 require-pressure-to-show=false
 transparency-mode='FIXED'
 disable-overview-on-startup=true
+running-indicator-style='DOTS'
 
 [org/gnome/desktop/interface]
 clock-format='12h'
