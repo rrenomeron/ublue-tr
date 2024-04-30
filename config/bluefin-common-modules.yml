@@ -7,7 +7,11 @@ modules:
     install:
     remove:
     # - org.gnome.eog
-    - org.mozilla.firefox/x86_64/stable
-    - org.mozilla.Thunderbird/x86_64/stable
-    - org.gnome.Maps/x86_64/stable
-    - org.gnome.Calendar/x86_64/stable
+    - org.mozilla.firefox
+    - org.mozilla.Thunderbird
+    - org.gnome.Maps
+    - org.gnome.Calendar
+- type: script
+  scripts:
+    - bluefin-fix-hidden-apps.sh
+    - bluefin-disable-rootful-docker.sh
