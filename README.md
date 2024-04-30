@@ -1,7 +1,11 @@
 # Rich Renomeron's Experimental Builds of Fedora Silverblue and Project Bluefin
 
 These are [Universal Blue](https://universal-blue.org)-based images built via [BlueBuild](https://bulue-build.org)'s 
-tools with a bunch of my personal preferences baked in. Currently, it's a way for me to experiment with an 
+tools with a bunch of my personal preferences baked in.  The images contain the 
+[Fedora Silverblue](https://silverblue.fedoraproject.org) operating system
+with custom modifications.
+
+Currently, it's a way for me to experiment with an 
 atomic operating system and adapt it to my (non-work) workflows.  Or maybe to adapt my personal workflows to The Way of
 the Container. In the future, it might become the standard install for my personal devices.
 
@@ -23,6 +27,7 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
 For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr``):
 
+- Developer mode enabled by default.  Not recommended to turn it off.
 - Default Fedora/GNOME keybindings and fonts
 - Starship disabled by default (users can enable if needed)
 - GNOME Terminal as default terminal
