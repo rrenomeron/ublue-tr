@@ -15,3 +15,4 @@ modules:
   scripts:
     - bluefin-fix-hidden-apps.sh
     - bluefin-disable-rootful-docker.sh
+    - bluefin-disable-starship.sh

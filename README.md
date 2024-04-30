@@ -24,6 +24,7 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr``):
 
 - Default Fedora/GNOME keybindings and fonts
+- Starship disabled by default (users can enable if needed)
 - GNOME Terminal as default terminal
 - Rootful Docker disabled.  Users can set up [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 
@@ -82,6 +83,7 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 ## TODO
 
 - Figure out how to signal user that a Chrome update is available/freshly layered
+- Figure out whether The Way will be ``(Silverblue + Bluefin stuff I like)`` or ``(Bluefin - Bluefin stuff I don't like)``
 - Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
 - Automate TPM whole-disk encryption (see https://github.com/bsherman/ublue-custom/blob/main/usr/bin/luks-enable-tpm2-autounlock)
 
