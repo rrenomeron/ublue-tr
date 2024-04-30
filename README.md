@@ -8,10 +8,11 @@ the Container. In the future, it might become the standard install for my person
 Features common to both images:
 
 - Google Chrome RPM installed (albeit in a complicated manner) and set as default browser
-- Variety wallpaper changer (installed as RPM for now)
+- [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps
 - ``<CTRL><ALT>t`` opens a terminal
+- Dark styles enabled by default
 
 For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
@@ -24,6 +25,7 @@ For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr``):
 
 - Default Fedora/GNOME keybindings and fonts
 - GNOME Terminal as default terminal
+- Rootful Docker disabled.  Users can set up [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 
 We default to Fedora 39.  If you want Fedora 40, add ``-40`` to the image name (e.g ``ublue-tr-40``).
 
@@ -51,6 +53,13 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
+- If you are on an existing Universal Blue-based atomic installation, you should just be able to
+  rebase directly:
+  ```
+  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/rrenomeron/ublue-tr:latest
+  systemctl reboot
+  ```
+
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
 If you want to try Fedora 40, use ``ublue-tr-40`` as the image name.  Eventually this will become the
@@ -75,5 +84,5 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 - Figure out how to signal user that a Chrome update is available/freshly layered
 - Figure out what my development container workflow is going to look like (distrobox? toolbox? something else?)
 - Automate TPM whole-disk encryption (see https://github.com/bsherman/ublue-custom/blob/main/usr/bin/luks-enable-tpm2-autounlock)
-- On Bluefin, enable rootless Docker by default
+
 
