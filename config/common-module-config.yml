@@ -85,6 +85,7 @@ modules:
       - "update-ca-trust extract"
     scripts:      
       - chrome-workaround-manual-install.sh
+      - install-system76-wallpaper.sh
 
   - type: bling
     install:
