@@ -17,8 +17,7 @@ modules:
       # - https://rrenomeron.github.io/ublue-tr/repos/vscode.repo
     install:
       # - micro
-      # - starship
-      - neofetch
+      # - starship      
       - langpacks-en
       - nss-tools
       - google-roboto-mono-fonts
