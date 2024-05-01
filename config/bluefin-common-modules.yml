@@ -2,15 +2,6 @@ modules:
 - type: files
   files:
   - dconf-bluefin: /usr/etc/dconf/db/local.d
-- type: default-flatpaks
-  system:
-    install:
-    remove:
-    # - org.gnome.eog
-    - org.mozilla.firefox
-    - org.mozilla.Thunderbird
-    - org.gnome.Maps
-    - org.gnome.Calendar
 - type: script
   scripts:
     - bluefin-fix-hidden-apps.sh
