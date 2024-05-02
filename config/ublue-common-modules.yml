@@ -19,6 +19,7 @@ modules:
     - code
     - liberation-fonts
     - cascadia-code-fonts
+    - yaru-theme
 - type: default-flatpaks
   system:
     install:
