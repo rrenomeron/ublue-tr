@@ -1,8 +1,16 @@
 #!/bin/bash
 
 # Check currently layered Chrome version against the latest that the CI process found.
-# Todo: Inform the user that Chrome has been updated so they'll know to reboot to get the 
-# latest Chrome goodness.
+
+function notify_user() {    
+    logger $1
+    user_name=$(loginctl list-sessions --output=json | jq -r '.[].user')
+    uid=$(loginctl list-sessions --output=json | jq -r '.[].uid')
+    xdg_runtime_path="/run/user/$uid"
+    display_var=$(printenv DISPLAY)
+    sudo -u "$user_name" DBUS_SESSION_BUS_ADDRESS=unix:path="$xdg_runtime_path"/bus DISPLAY="$display_var" notify-send "Google Chrome Update Service" "$1" --app-name="Google Chrome Update Service" -u NORMAL
+}
+
 if rpm -q google-chrome-stable > /dev/null; then
     CHROME_INSTALLED_VERSION=$(rpm -q --queryformat '%{VERSION}' google-chrome-stable)
 else
@@ -12,14 +20,20 @@ fi
 CHROME_DOWNLOADED_VERSION=$(cat /usr/share/ublue-tr/chrome-workarounds/google-chrome-current-version)
 
 if [ "$CHROME_INSTALLED_VERSION" == "$CHROME_DOWNLOADED_VERSION" ]; then
-    echo "Installed version of Google Chrome ($CHROME_INSTALLED_VERSION) is current"
+    notify_user "Google Chrome ($CHROME_INSTALLED_VERSION) is current"
 else
     set -eou pipefail
-    echo "Google Chrome needs an upgrade from $CHROME_INSTALLED_VERSION to $CHROME_DOWNLOADED_VERSION"
+    notify_user "Updating Chrome from $CHROME_INSTALLED_VERSION to $CHROME_DOWNLOADED_VERSION"
     if [ "$CHROME_INSTALLED_VERSION" != "not installed" ]; then
-        rpm-ostree remove google-chrome-stable
+        rpm-ostree remove google-chrome-stable || notify_user "Failed to remove existing Chrome for next reboot"
     fi
-    rpm-ostree install /usr/share/ublue-tr/chrome-workarounds/google-chrome-stable_current_x86_64.rpm
+    rpm-ostree install /usr/share/ublue-tr/chrome-workarounds/google-chrome-stable_current_x86_64.rpm || \
+        notify_user "Failed to install new Chrome version"
+
+    notify_user "Reboot to use new Chrome version $CHROME_DOWNLOADED_VERSION"
+fi
+
+if [ -f /etc/yum.repos.d/google-chrome.repo ]; then
     # The RPM installs the Google Chrome yum repo by default.  Apparently rpm-ostree will check this
     # on an ordinary image update, and fail when it does so.
     # To avoid this, we'll disable it.
