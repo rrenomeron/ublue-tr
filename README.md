@@ -2,7 +2,8 @@
 
 These are [Universal Blue](https://universal-blue.org)-based images built via
 [BlueBuild](https://bulue-build.org)'s tools with a bunch of my personal preferences baked in.
-The images contain the [Fedora Silverblue](https://silverblue.fedoraproject.org) operating
+The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) or 
+[Project Bluefin](https://projectbluefin.io) operating
 system with custom modifications.
 
 Currently, it's a way for me to experiment with an atomic operating system and adapt it to my
