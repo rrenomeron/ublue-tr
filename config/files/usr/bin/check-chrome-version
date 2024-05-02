@@ -23,6 +23,14 @@ if [ "$CHROME_INSTALLED_VERSION" == "$CHROME_DOWNLOADED_VERSION" ]; then
     notify_user "Google Chrome ($CHROME_INSTALLED_VERSION) is current"
 else
     set -eou pipefail
+    RPM_OSTREE_BUSY=$(rpm-ostree status | grep "State: busy")
+    while [ -n "$RPM_OSTREE_BUSY" ]; do
+        notify_user "Waiting on rpm-ostree"
+        sleep 300
+        logger "Checking for rpm-ostree to be done"
+        RPM_OSTREE_BUSY=$(rpm-ostree status | grep "State: busy")
+    done
+
     notify_user "Updating Chrome from $CHROME_INSTALLED_VERSION to $CHROME_DOWNLOADED_VERSION"
     if [ "$CHROME_INSTALLED_VERSION" != "not installed" ]; then
         rpm-ostree remove google-chrome-stable || notify_user "Failed to remove existing Chrome for next reboot"
