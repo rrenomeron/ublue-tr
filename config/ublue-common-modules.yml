@@ -2,6 +2,9 @@ modules:
 - type: files
   files:
     - dconf-ublue: /usr/etc/dconf/db/local.d
+- type: script
+  scripts:
+    - ublue-get-files-from-bluefin.sh
 - type: rpm-ostree
   repos:
   # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
