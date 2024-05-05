@@ -23,14 +23,4 @@ modules:
     - liberation-fonts
     - cascadia-code-fonts
     - yaru-theme
-- type: default-flatpaks
-  system:
-    install:
-      - com.github.tchx84.Flatseal
-      - com.mattjakeman.ExtensionManager
-      - org.gnome.Weather
-      - org.gnome.Evince 
-      - org.gnome.Loupe
-      - org.gnome.baobab
-    remove:
-      # - org.gnome.eog
+
