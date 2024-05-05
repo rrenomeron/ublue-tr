@@ -66,6 +66,14 @@ modules:
         - org.gnome.Snapshot
         - us.zoom.Zoom
         - ca.desrt.dconf-editor
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.Weather
+        - org.gnome.Evince 
+        - org.gnome.Loupe
+        - org.gnome.baobab
+        - org.fedoraproject.MediaWriter
+        - io.github.flattool.Warehouse
         # - google-chrome-stable
 
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
