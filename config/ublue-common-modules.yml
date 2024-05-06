@@ -23,4 +23,7 @@ modules:
     - liberation-fonts
     - cascadia-code-fonts
     - yaru-theme
+  remove:
+   # - gnome-extensions-app
+    - gnome-software-rpm-ostree
 
