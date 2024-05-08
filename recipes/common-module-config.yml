@@ -58,7 +58,8 @@ modules:
         - org.libreoffice.LibreOffice        
         - com.nextcloud.desktopclient.nextcloud
         - com.spotify.Client 
-        - org.audacityteam.Audacity org.sqlitebrowser.sqlitebrowser 
+        - org.audacityteam.Audacity 
+        - org.sqlitebrowser.sqlitebrowser 
         - org.openshot.OpenShot 
         - io.dbeaver.DBeaverCommunity
         - org.darktable.Darktable
@@ -74,6 +75,10 @@ modules:
         - org.gnome.baobab
         - org.fedoraproject.MediaWriter
         - io.github.flattool.Warehouse
+        - org.gnome.Logs
+        - org.gnome.Calculator
+        - org.gnome.TextEditor
+        - org.gnome.font-viewer
         # - google-chrome-stable
 
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
