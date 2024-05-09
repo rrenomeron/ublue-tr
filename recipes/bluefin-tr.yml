@@ -1,0 +1,15 @@
+# image will be published to ghcr.io/<user>/<name>
+name: bluefin-tr
+# description will be included in the image's metadata
+description: A Project Bluefin image with my personal preference baked in
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bluefin
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - from-file: modules/common.yml
+  - from-file: modules/bluefin.yml
+  - from-file: modules/flatpaks-basic.yml

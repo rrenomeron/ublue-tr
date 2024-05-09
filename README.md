@@ -1,4 +1,4 @@
-# Rich Renomeron's Experimental Builds of Fedora Silverblue and Project Bluefin
+# Rich Renomeron's Builds of Fedora Silverblue and Project Bluefin
 
 These are [Universal Blue](https://universal-blue.org)-based images built via
 [BlueBuild](https://bulue-build.org)'s tools with a bunch of my personal preferences baked in.
@@ -6,18 +6,21 @@ The images contain either the [Fedora Silverblue](https://silverblue.fedoraproje
 [Project Bluefin](https://projectbluefin.io) operating
 system with custom modifications.
 
-Currently, it's a way for me to experiment with an atomic operating system and adapt it to my
-(non-work) workflows.  Or maybe to adapt my personal workflows to The Way of the Container. In
-the future, it might become the standard install for my personal devices.
+Currently, I am in the process of migrating my personal Linux devices to these images from
+Ubuntu and/or Pop!_OS.
 
 Features common to both images:
 
-- Google Chrome RPM installed (albeit in a complicated manner) and set as default browser
+- Google Chrome RPM installed and set as default browser
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps
 - ``<CTRL><ALT>t`` opens a terminal
+- Single click to open items in Nautilus
+- Use smaller icons in Nautilus icon view
+- Sort directories first in Nautilus and GTK file choosers
 - Dark styles enabled by default
+- System76 wallpaper collection
 
 For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
@@ -25,17 +28,20 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Libvirt/Virt-Manager installed on host
 - Dash-to-Dock enabled by default, skipping Overview on login
 - Appindicators enabled by default
+- Logo Menu enabled in default (like Bluefin)
 
-For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr``):
+For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenomero/bluefin-tr``):
 
-- Developer mode enabled by default.  Not recommended to turn it off.
+- Developer mode enabled by default on the ``-dx`` image.  Switching between ``dx`` and non-``dx``
+  images not (yet) supported.
 - Default Fedora/GNOME keybindings and fonts
 - Starship disabled by default (users can enable if needed)
 - GNOME Terminal as default terminal
 - Rootful Docker disabled.  Users can set up 
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 
-We default to Fedora 39.  If you want Fedora 40, add ``-40`` to the image name (e.g ``ublue-tr-40``).
+We default to Fedora 39.  If you want Fedora 40, add ``-canary`` to the image name 
+(e.g ``ublue-tr-canary``).
 
 ## Installation
 
@@ -68,12 +74,10 @@ To rebase an existing atomic Fedora installation to the latest build:
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. That build will still always use
-the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next
-major version.
+The `latest` tag will automatically point to the latest build.  
 
-If you want to try Fedora 40, use ``ublue-tr-40`` as the image name.  Eventually this will
-become the regular image, once I determine Fedora 40 is stable enough and I've confident in the
+If you want to try Fedora 40, use ``ublue-tr-canary`` as the image name.  Eventually this will
+become the regular image, once I determine Fedora 40 is stable enough and I'm confident in the
 upgrade experience.
 
 ## Installing via ISO
@@ -83,8 +87,8 @@ If you have ``podman`` installed on your system, you can generate an offline ISO
 ```
 ./download-iso.sh $IMAGE_NAME
 ```
-where ``$IMAGE_NAME`` is one of ``ublue-tr``, ``ublue-tr-40``, ``bluefin-tr``, or
-``bluefin-tr-40``.
+where ``$IMAGE_NAME`` is one of ``ublue-tr``, ``ublue-tr-canary``, ``bluefin-tr``,
+``bluefin-dx-tr-``, or ``bluefin-dx-tr-canary``.
 
 ## Verification
 > **Warning**  
@@ -105,6 +109,7 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
   Bluefin stuff I don't like)``
 - Figure out what my development container workflow is going to look like (distrobox? toolbox?
   something else?)
+- Add historic Ubuntu wallpaers
 
 
 

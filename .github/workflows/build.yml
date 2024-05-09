@@ -22,10 +22,11 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - recipe.yml
-          - recipe-40.yml
-          - recipe-bluefin-39.yml
-          - recipe-bluefin-40.yml
+          - ublue-tr.yml
+          - ublue-tr-canary.yml
+          - bluefin-tr.yml
+          - bluefin-dx-tr.yml
+          - bluefin-dx-tr-canary.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
