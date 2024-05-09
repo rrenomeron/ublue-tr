@@ -35,7 +35,7 @@ modules:
       - socat
       - google-chrome-stable
     optfix:
-      - /opt/google              
+      - google              
 
     remove:
       # example: removing firefox (in favor of the flatpak)
