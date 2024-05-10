@@ -55,7 +55,7 @@ modules:
     scripts:      
       # - chrome-workaround-manual-install.sh
       - install-system76-wallpaper.sh
-      - install-ubuntu-wallpapers.sh
+      # - install-ubuntu-wallpapers.sh
 
   - type: bling
     install:

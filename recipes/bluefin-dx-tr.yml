@@ -13,3 +13,4 @@ modules:
   - from-file: modules/common.yml
   - from-file: modules/bluefin.yml
   - from-file: modules/flatpaks-full.yml
+  - from-file: modules/ubuntu-wallpaper.yml
