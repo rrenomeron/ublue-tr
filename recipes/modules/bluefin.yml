@@ -2,6 +2,10 @@ modules:
 - type: files
   files:
   - dconf-bluefin: /usr/etc/dconf/db/local.d
+- type: rpm-ostree
+  repos:
+  install:
+    - docker-compose 
 - type: script
   scripts:
     - bluefin-fix-hidden-apps.sh
