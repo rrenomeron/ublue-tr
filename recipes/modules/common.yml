@@ -34,6 +34,7 @@ modules:
       - variety
       - socat
       - google-chrome-stable
+      - at
     optfix:
       - google              
 
