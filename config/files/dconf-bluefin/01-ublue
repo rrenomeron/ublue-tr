@@ -110,9 +110,10 @@ new-tab=false
 flatpak='off'
 
 [org/gnome/shell/extensions/Logo-menu]
-menu-button-icon-image=1
-# menu-button-terminal='xdg-terminal-exec'
-# menu-button-system-monitor='flatpak run io.missioncenter.MissionCenter'
+symbolic-icon=true
+menu-button-icon-image=30
+#menu-button-terminal='xdg-terminal-exec'
+#menu-button-system-monitor='flatpak run io.missioncenter.MissionCenter'
 menu-button-extensions-app='com.mattjakeman.ExtensionManager.desktop'
 menu-button-software-center='gnome-software'
 show-activities-button=true
@@ -124,7 +125,12 @@ show-boxbuddy=true
 
 [org/gnome/shell/extensions/search-light]
 shortcut-search=['<Super>space']
-
+scale-width=0.10
+scale-height=0.15
+border-thickness=1
+border-radius=1.65
+border-color=(0.23, 0.23, 0.23, 1.0)
+background-color=(0.0, 0.0, 0.0, 0.8)
 
 [org/gnome/Ptyxis]
 interface-style='system'
@@ -136,3 +142,9 @@ default-profile-uuid='2871e8027773ae74d6c87a5f659bbc74'
 
 [org/gnome/Ptyxis/Profiles/2871e8027773ae74d6c87a5f659bbc74]
 palette='catppuccin-dynamic'
+
+[org/gnome/shell/extensions/auto-power-profile]
+ac='balanced'
+bat='power-saver'
+notify=true
+lapmode=true
