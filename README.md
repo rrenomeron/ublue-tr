@@ -4,23 +4,21 @@ These are [Universal Blue](https://universal-blue.org)-based images built via
 [BlueBuild](https://bulue-build.org)'s tools with a bunch of my personal preferences baked in.
 The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) or 
 [Project Bluefin](https://projectbluefin.io) operating
-system with custom modifications.
-
-Currently, I am in the process of migrating my personal Linux devices to these images from
-Ubuntu and/or Pop!_OS.
+system with custom modifications.  I am currently daily driving the Bluefin image.
 
 Features common to both images:
 
 - Google Chrome RPM installed and set as default browser
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
-- Curated selection of Flatpak apps
+- Curated selection of Flatpak apps installed automatically at runtime
 - ``<CTRL><ALT>t`` opens a terminal
 - Single click to open items in Nautilus
 - Use smaller icons in Nautilus icon view
 - Sort directories first in Nautilus and GTK file choosers
 - Dark styles enabled by default
-- System76 wallpaper collection
+- [System76 wallpaper collection](https://system76.com/merch/desktop-wallpapers)
+- Historical Ubuntu wallpapers, mostly from the LTS versions
 
 For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
@@ -28,13 +26,13 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Libvirt/Virt-Manager installed on host
 - Dash-to-Dock enabled by default, skipping Overview on login
 - Appindicators enabled by default
-- Logo Menu enabled in default (like Bluefin)
+- Logo Menu enabled by default (like Bluefin)
 
 For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenomero/bluefin-tr``):
 
 - Developer mode enabled by default on the ``-dx`` image.  Switching between ``dx`` and non-``dx``
-  images not (yet) supported.
-- Default Fedora/GNOME keybindings and fonts
+  images via ``ujust`` not (yet) supported.
+- Default Fedora/GNOME keybindings, icons and fonts
 - Starship disabled by default (users can enable if needed)
 - GNOME Terminal as default terminal
 - Rootful Docker disabled.  Users can set up 
@@ -109,7 +107,6 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
   Bluefin stuff I don't like)``
 - Figure out what my development container workflow is going to look like (distrobox? toolbox?
   something else?)
-- Add historic Ubuntu wallpaers
 
 
 

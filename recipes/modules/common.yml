@@ -8,7 +8,6 @@ modules:
           # put configuration files you want in /etc/ on a booted system 
           # in /usr/etc/ in the image. read more in files module reference.
   # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
-  # Should theoretically enable installation of Chrome w/ RPM-OSTree, but does not work
   - type: script
     scripts:
       - enable-chrome-yum-repo.sh
