@@ -31,4 +31,9 @@ modules:
   remove:
    # - gnome-extensions-app
     - gnome-software-rpm-ostree
+  
+- type: script
+  snippets:
+    # Disable rootful docker
+    - "systemctl disable docker.service docker.socket"
 
