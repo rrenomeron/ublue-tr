@@ -52,6 +52,7 @@ modules:
     # We run this to put get our home CA in the system circle of trust
     snippets:
       - "update-ca-trust extract"
+      - "systemctl enable fix-atd-missing-directories.service"
     scripts:      
       # - chrome-workaround-manual-install.sh
       - install-system76-wallpaper.sh
