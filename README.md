@@ -4,11 +4,12 @@ These are [Universal Blue](https://universal-blue.org)-based images built via
 [BlueBuild](https://bulue-build.org)'s tools with a bunch of my personal preferences baked in.
 The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) or 
 [Project Bluefin](https://projectbluefin.io) operating
-system with custom modifications.  I am currently daily driving the Bluefin image.
+system with custom modifications.  I am currently daily driving the Bluefin DX image.
 
 Features common to both images:
 
 - Google Chrome RPM installed and set as default browser
+- System76 Power daemon included
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps installed automatically at runtime
