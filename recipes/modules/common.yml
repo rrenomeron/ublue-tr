@@ -55,6 +55,7 @@ modules:
     scripts:      
       # - chrome-workaround-manual-install.sh
       - install-system76-wallpaper.sh
+      # Limiting this big download to daily driver images
       # - install-ubuntu-wallpapers.sh
 
   - type: bling
