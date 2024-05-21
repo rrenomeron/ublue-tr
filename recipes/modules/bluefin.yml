@@ -3,10 +3,7 @@ modules:
   files:
   - dconf-bluefin: /usr/etc/dconf/db/local.d
 - type: script
-  snippets:
-    - "systemctl disable docker.service docker.socket"
-    - "sed -i '/starship init bash/d'  /etc/bashrc"
   scripts:
     - bluefin-fix-hidden-apps.sh
-    #- bluefin-disable-rootful-docker.sh
-    #- bluefin-disable-starship.sh
+    - bluefin-disable-rootful-docker.sh
+    - bluefin-disable-starship.sh
