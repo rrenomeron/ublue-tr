@@ -34,7 +34,7 @@ modules:
       - variety
       - socat
       - google-chrome-stable
-      - system76-power
+      # - system76-power
     optfix:
       - google              
 
