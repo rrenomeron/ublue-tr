@@ -9,7 +9,6 @@ system with custom modifications.  I am currently daily driving the Bluefin DX i
 Features common to both images:
 
 - Google Chrome RPM installed and set as default browser
-- System76 Power daemon included
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps installed automatically at runtime
@@ -23,11 +22,14 @@ Features common to both images:
 
 For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
-- Visual Studio Code RPM installed with Cascadia Code fonts
+- Visual Studio Code RPM installed
 - Libvirt/Virt-Manager installed on host
+- Docker CE installed with rootful Docker disabled
 - Dash-to-Dock enabled by default, skipping Overview on login
 - Appindicators enabled by default
 - Logo Menu enabled by default (like Bluefin)
+- Cascadia Code set as default monospace font
+- Windows have minimize and maximize buttons (like Ubuntu and Bluefin)
 
 For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenomero/bluefin-tr``):
 
