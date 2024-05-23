@@ -50,9 +50,10 @@ modules:
     include:
       - 50_tr-fedora.gschema.override
   - type: script
-    # We run this to put get our home CA in the system circle of trust
     snippets:
+    # We run this to put get our home CA in the system circle of trust
       - "update-ca-trust extract"
+      - "systemctl enable -f google-chrome-ensure-symlinks-exist.service"
     scripts:      
       # - chrome-workaround-manual-install.sh
       - install-system76-wallpaper.sh

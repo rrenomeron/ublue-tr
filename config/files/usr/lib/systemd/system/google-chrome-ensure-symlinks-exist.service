@@ -1,0 +1,11 @@
+[Unit]
+Description=Check and update locally layered Google Chrome install
+Wants=network-online.target
+After=system-flatpak-setup.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/check-chrome-symlinks
+
+[Install]
+WantedBy=multi-user.target
