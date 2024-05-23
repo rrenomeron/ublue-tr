@@ -34,6 +34,7 @@ modules:
       - variety
       - socat
       - google-chrome-stable
+      - gnome-shell-extension-system-monitor-applet
       # - system76-power
     optfix:
       - google              

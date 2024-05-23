@@ -1,0 +1,23 @@
+[org/gnome/shell/extensions/system-monitor]
+cpu-graph-width=20
+disk-display=true
+disk-graph-width=20
+icon-display=false
+memory-graph-width=20
+net-graph-width=20
+
+# When enabled for the first time, it appears to default to the 
+# Gnome logo (but this isn't an issue on Bluefin).  We'll force
+# the Universal Blue logo just in case.
+
+[org/gnome/shell/extensions/Logo-menu]
+symbolic-icon=true
+menu-button-icon-image=30
+menu-button-extensions-app='com.mattjakeman.ExtensionManager.desktop'
+menu-button-software-center='gnome-software'
+show-activities-button=true
+show-lockscreen=false
+show-power-option=false
+show-gamemode=false
+hide-forcequit=true
+show-boxbuddy=true
