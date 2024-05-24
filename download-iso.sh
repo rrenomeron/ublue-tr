@@ -11,7 +11,7 @@ if [ -z $(command -v podman) ]; then
     echo "Podman is required"
     exit 1
 fi
-IMAGE_NAME=${1-ublue-tr}
+IMAGE_NAME=${1-bluefin-dx-tr}
 echo "Creating an ISO for the $IMAGE_NAME image"
 rm -rf ./output
 mkdir ./output
