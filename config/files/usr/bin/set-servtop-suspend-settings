@@ -8,9 +8,14 @@ if [ "`id -u`" -ne 0 ]; then
     exit 1
 fi
 
-sudo -u gdm dbus-run-session gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
+USERS=$(getent passwd | grep -v /sbin/ | grep -v /bin/sync |  grep -v root | cut -d ":" -f 1 ) 
+logger "Disabling GNOME autosuspend settings for users $USERS"
+for u in $USERS gdm; do
+    sudo -u $u dbus-run-session gsettings set \
+        org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0
 
-# We set the battery timeout to 0 because if the servtop is ever on battery power, we won't want
-# to suspend, since it won't last very long on suspend anyway.
-
-sudo -u gdm dbus-run-session gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
+    # We set the battery timeout to 0 because if the servtop is ever on battery power, we won't want
+    # to suspend, since it won't last very long on suspend anyway.
+    sudo -u $u dbus-run-session gsettings set \
+        org.gnome.settings-daemon.plugins.power sleep-inactive-battery-timeout 0
+done
