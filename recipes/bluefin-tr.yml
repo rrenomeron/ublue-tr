@@ -10,6 +10,6 @@ image-version: 39 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: modules/common.yml
-  - from-file: modules/bluefin.yml
-  - from-file: modules/flatpaks-basic.yml
+  - from-file: shared/common.yml
+  - from-file: shared/bluefin.yml
+  - from-file: shared/flatpaks-basic.yml
