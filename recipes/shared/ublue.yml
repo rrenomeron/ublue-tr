@@ -27,9 +27,18 @@ modules:
     - docker-ce-cli
     - docker-buildx-plugin
     - docker-compose-plugin
+    - cockpit-machines
+    - cockpit-networkmanager
+    - cockpit-ostree
+    - cockpit-pcp
+    - cockpit-podman
+    - cockpit-selinux
+    - cockpit-storaged
+    - cockpit-system
+    - fastfetch
 
   remove:
-   # - gnome-extensions-app
+    - gnome-extensions-app
     - gnome-software-rpm-ostree
   
 - type: script
