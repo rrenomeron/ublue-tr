@@ -38,7 +38,8 @@ modules:
     - fastfetch
 
   remove:
-    - gnome-extensions-app
+    # This doesn't work
+    #- gnome-extensions-app
     - gnome-software-rpm-ostree
   
 - type: script
