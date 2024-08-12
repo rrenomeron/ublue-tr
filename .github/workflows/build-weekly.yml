@@ -1,8 +1,8 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "00 7 * * *" # build at 7:00 UTC every day 
-                          # (ublue images start building at 05:04 UTC)
+    - cron: "00 7 * * 0" # build at 07:00 UTC on Sundays
+                          # (bluefin updates 05:41 UTC)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
@@ -10,7 +10,7 @@ on:
   pull_request:
   workflow_dispatch: # allow manually triggering builds
 jobs:
-  bluebuild:
+  weekly-image-builds:
     name: Build Custom Image
     runs-on: ubuntu-latest
     permissions:
@@ -22,8 +22,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - ublue-tr.yml
-          - ublue-tr-canary.yml
+          - bluefin-tr.yml
+          - bluefin-dx-tr.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
