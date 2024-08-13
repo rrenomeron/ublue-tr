@@ -5,8 +5,6 @@ modules:
           # copies stuff to /etc that will be needed by the installer
       - usr: /usr
           # copies config/files/usr into your image's /usr.
-          # put configuration files you want in /etc/ on a booted system 
-          # in /usr/etc/ in the image. read more in files module reference.
   # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
   - type: script
     scripts:
