@@ -1,4 +1,4 @@
-name: bluebuild
+name: Weekly Image Builds
 on:
   schedule:
     - cron: "00 7 * * 0" # build at 07:00 UTC on Sundays

@@ -1,4 +1,4 @@
-name: bluebuild
+name: Daily Image Builds
 on:
   schedule:
     - cron: "00 7 * * *" # build at 7:00 UTC every day 
