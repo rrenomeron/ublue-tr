@@ -1,7 +1,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: ublue-tr-canary
 # description will be included in the image's metadata
-description: A Universal Blue-based Fedora image with the latest version and my personal preference baked in
+description: A Universal Blue-based Fedora image with the latest version and my personal preferences baked in
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
