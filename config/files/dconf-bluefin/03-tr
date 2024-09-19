@@ -1,5 +1,5 @@
 [org/gnome/shell]
-favorite-apps=['org.gnome.Nautilus.desktop','google-chrome.desktop','org.libreoffice.LibreOffice.writer.desktop','org.darktable.Darktable.desktop', 'com.discordapp.Discord.desktop','com.spotify.Client.desktop', 'code.desktop', 'org.gnome.Software.desktop']
+favorite-apps=['org.gnome.Nautilus.desktop','google-chrome.desktop','org.libreoffice.LibreOffice.writer.desktop','org.darktable.darktable.desktop', 'com.discordapp.Discord.desktop','com.spotify.Client.desktop', 'code.desktop', 'org.gnome.Software.desktop']
 
 [org/gnome/nautilus/icon-view]
 default-zoom-level='small-plus'
