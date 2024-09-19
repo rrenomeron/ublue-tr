@@ -21,7 +21,6 @@ modules:
         - org.sqlitebrowser.sqlitebrowser 
         - org.openshot.OpenShot 
         - io.dbeaver.DBeaverCommunity
-        - org.darktable.Darktable
         - org.gnome.Totem
         - org.gnome.Snapshot
         - us.zoom.Zoom
