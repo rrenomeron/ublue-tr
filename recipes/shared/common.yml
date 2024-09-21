@@ -1,10 +1,8 @@
 modules:
   - type: files
     files:
-      - etc: /etc
-          # copies stuff to /etc that will be needed by the installer
-      - usr: /usr
-          # copies config/files/usr into your image's /usr.
+      - source: system
+        destination: /
   # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
   - type: script
     scripts:

@@ -1,7 +1,8 @@
 modules:
 - type: files
   files:
-  - dconf-bluefin: /etc/dconf/db/local.d
+  - source: dconf-bluefin
+    destination: /etc/dconf/db/local.d
 - type: script
   snippets:
   - "systemctl disable tailscaled"
