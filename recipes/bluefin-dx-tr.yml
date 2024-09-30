@@ -5,7 +5,10 @@ description: A Project Bluefin DX with my personal preferences baked in
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: gts # latest is also supported if you want new updates ASAP
+# 9/30/24: We are entering our Fedora 40 era a little early
+# Change this back to 'gts' after Fedora 41 is released
+# and Bluefin GTS moves to Fedora 40
+image-version: stable
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
