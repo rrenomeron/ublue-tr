@@ -1,8 +1,8 @@
 name: Weekly Image Builds
 on:
   schedule:
-    - cron: "00 7 * * 0" # build at 07:00 UTC on Sundays
-                          # (bluefin updates 05:41 UTC)
+    - cron: "00 7 * * 2" # bluefin *stable* updates at 0541 UTC on Tuesdays
+                         # change back to Sunday when bluefin-tr goes back to gts
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
