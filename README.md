@@ -49,12 +49,17 @@ Fedora 41, add ``-canary`` to the image name (e.g ``ublue-tr-canary``).
 > **Warning**  
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
+First, install any [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) or
+[Universal Blue](https://universal-blue.org) desktop edition (preferably one that features
+GNOME, like Silverblue or Bluefin).
+
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
   rpm-ostree rebase ostree-unverified-registry:ghcr.io/rrenomeron/ublue-tr:latest
   ```
+  (Note: you can substiture one of the other image names if you want to use e.g. Bluefin.)
 - Reboot to complete the rebase:
   ```
   systemctl reboot
@@ -77,9 +82,6 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build.  
 
-If you want to try Fedora 40, use ``ublue-tr-canary`` as the image name.  Eventually this will
-become the regular image, once I determine Fedora 40 is stable enough and I'm confident in the
-upgrade experience.
 
 ## Installing via ISO
 
@@ -106,10 +108,12 @@ cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 
 ## TODO
 
-- Figure out whether The Way will be ``(Silverblue + Bluefin stuff I like)`` or ``(Bluefin -
-  Bluefin stuff I don't like)``
 - Figure out what my development container workflow is going to look like (distrobox? toolbox?
   something else?)
+- Fix ISO generation issues for better 1st run experience on a new device
+- Look at features from [Secure Blue](https://github.com/secureblue/secureblue) to incorporate
+- Re-evaluate some Bluefin choices we disagree with (e.g. Mission Center over GNOME
+  System Monitor)
 
 
 
