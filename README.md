@@ -41,8 +41,8 @@ For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenom
 - Rootful Docker disabled.  Users can set up 
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 
-We default to Fedora 39.  If you want Fedora 40, add ``-canary`` to the image name 
-(e.g ``ublue-tr-canary``).
+We default to Fedora 40.  Once Universal Blue and Bluefin add support for 
+Fedora 41, add ``-canary`` to the image name (e.g ``ublue-tr-canary``).
 
 ## Installation
 
