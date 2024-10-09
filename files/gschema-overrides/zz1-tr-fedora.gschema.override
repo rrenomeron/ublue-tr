@@ -4,6 +4,10 @@ favorite-apps=['org.gnome.Nautilus.desktop','google-chrome.desktop','org.libreof
 [org.gnome.desktop.wm.preferences]
 button-layout=':minimize,maximize,close'
 
+# Override Bluefin overrides
+# TODO: Remove when Bluefin returns to GNOME defaults
+titlebar-font="Cantarell Bold 11"
+
 [org.gnome.nautilus.icon-view]
 default-zoom-level='small-plus'
 
@@ -33,6 +37,13 @@ color-scheme='prefer-dark'
 show-battery-percentage=true
 monospace-font-name='Cascadia Code 14'
 
+# Override the Bluefin overrides.
+# TODO: Remove when they go back to GNOME defaults
+font-name="Cantarell 11"
+document-font-name="Cantarell 11"
+icon-theme="Adwaita"
+gtk-theme="Adwaita"
+
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
 startup-mode='cwd'
@@ -40,5 +51,7 @@ startup-mode='cwd'
 [org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
 
+# Per upstream, we can remove this when we default to Fedora 40
+# on all builds
 [org.gnome.desktop.peripherals.touchpad]
 tap-to-click=true
