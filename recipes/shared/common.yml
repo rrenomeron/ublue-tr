@@ -49,7 +49,7 @@ modules:
 
   - type: gschema-overrides  # this sets up our dconf overrides
     include:
-      - 50_tr-fedora.gschema.override
+      - zz1-tr-fedora.gschema.override
   - type: script
     snippets:
     # We run this to put get our home CA in the system circle of trust
