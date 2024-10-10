@@ -105,7 +105,11 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s
 ```bash
 cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
 ```
+## Building Locally
 
+```
+bluebuild build --build-driver=podman [recipe file]
+```
 ## TODO
 
 - Figure out what my development container workflow is going to look like (distrobox? toolbox?

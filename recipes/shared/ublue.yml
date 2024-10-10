@@ -2,7 +2,7 @@ modules:
 - type: files
   files:
     - source: dconf-ublue
-      destination: /etc/dconf/db/local.d
+      destination: /etc/dconf/db/distro.d
 - type: script
   scripts:
     - ublue-get-files-from-bluefin.sh
