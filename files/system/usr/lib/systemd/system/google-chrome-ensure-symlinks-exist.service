@@ -1,5 +1,5 @@
 [Unit]
-Description=Check and update locally layered Google Chrome install
+Description=Check for proper symlinks to make Google Chrome install work
 Wants=network-online.target
 After=system-flatpak-setup.service
 
