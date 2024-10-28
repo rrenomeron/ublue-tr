@@ -31,7 +31,7 @@ modules:
     - cockpit-machines
     - cockpit-networkmanager
     - cockpit-ostree
-    - cockpit-pcp
+    - cockpit-bridge
     - cockpit-podman
     - cockpit-selinux
     - cockpit-storaged
