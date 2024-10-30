@@ -8,7 +8,7 @@ base-image: ghcr.io/ublue-os/bluefin-dx
 # 9/30/24: We are entering our Fedora 40 era a little early
 # Change this back to 'gts' after Fedora 41 is released
 # and Bluefin GTS moves to Fedora 40
-image-version: stable
+image-version: gts
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
