@@ -41,7 +41,6 @@ modules:
   remove:
     # This doesn't work
     #- gnome-extensions-app
-    - gnome-software-rpm-ostree
   
 - type: script
   snippets:
