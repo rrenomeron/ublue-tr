@@ -38,7 +38,7 @@ modules:
     - cockpit-system
     - fastfetch
 
-  remove:
+  remove: []
     # This doesn't work
     #- gnome-extensions-app
   
