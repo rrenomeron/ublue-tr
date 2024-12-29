@@ -11,7 +11,7 @@ modules:
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       # - https://rrenomeron.github.io/ublue-tr/repos/vscode.repo
       # - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
-      - https://download.opensuse.org/repositories/graphics:darktable/Fedora_40/graphics:darktable.repo      
+      - https://download.opensuse.org/repositories/graphics:darktable/Fedora_%OS_VERSION%/graphics:darktable.repo      
       
     install:
       # - micro
