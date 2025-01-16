@@ -30,7 +30,9 @@ modules:
       - google-chrome-stable
       - gnome-shell-extension-system-monitor-applet
       - perl-Image-ExifTool
+      # Remove when we get Darktable on Flatpak
       - exiv2
+      - lensfun
       # - system76-power
     optfix:
       - google              
