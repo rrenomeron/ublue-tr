@@ -5,9 +5,9 @@
 
 set -eou pipefail
 
+# TODO: Respond to https://github.com/ublue-os/bluefin/pull/2076
 get_wallpaper() {
-    rsync -av system_files/silverblue/usr/share/backgrounds \
-              system_files/silverblue/usr/share/gnome-background-properties \
+    rsync -av system_files/silverblue/usr/share/gnome-background-properties \
               system_files/shared/usr/share/backgrounds \
               /usr/share
 }
