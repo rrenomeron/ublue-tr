@@ -8,11 +8,8 @@ modules:
     - ublue-get-files-from-bluefin.sh
 - type: rpm-ostree
   repos:
-  # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
   - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
   install:
-    # - micro
-    # - starship
     - libvirt
     - virt-manager
     - gnome-tweaks      
@@ -39,8 +36,6 @@ modules:
     - fastfetch
 
   remove: []
-    # This doesn't work
-    #- gnome-extensions-app
   
 - type: script
   snippets:

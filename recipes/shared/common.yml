@@ -8,14 +8,9 @@ modules:
     scripts:
       - enable-chrome-yum-repo.sh
   - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      # - https://rrenomeron.github.io/ublue-tr/repos/vscode.repo
-      # - https://copr.fedorainfracloud.org/coprs/szydell/system76/repo/fedora-%OS_VERSION%/szydell-system76-fedora-%OS_VERSION%.repo
-      []
+    repos: []
       
     install:
-      # - micro
-      # - starship      
       - langpacks-en
       - nss-tools
       - google-roboto-mono-fonts
@@ -56,10 +51,7 @@ modules:
       - "update-ca-trust extract"
       - "systemctl enable -f google-chrome-ensure-symlinks-exist.service"
     scripts:      
-      # - chrome-workaround-manual-install.sh
       - install-system76-wallpaper.sh
-      # Limiting this big download to daily driver images
-      # - install-ubuntu-wallpapers.sh
       - install-darktable-appimage.sh
 
   - type: bling
