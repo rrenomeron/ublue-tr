@@ -17,6 +17,7 @@ chmod ugo+x ./$DARKTABLE_APPIMAGE
 ./$DARKTABLE_APPIMAGE --appimage-extract
 cp ./$DARKTABLE_APPIMAGE /usr/bin
 ln -s /usr/bin/$DARKTABLE_APPIMAGE /usr/bin/darktable
+chmod ugo+x squashfs-root/org.darktable.darktable.desktop
 cp squashfs-root/org.darktable.darktable.desktop /usr/share/applications
 rsync -av squashfs-root/usr/share/icons/hicolor/ /usr/share/icons/hicolor
 
