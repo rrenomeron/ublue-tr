@@ -10,6 +10,8 @@ curl -L \
     https://github.com/darktable-org/darktable/releases/download/release-$DARKTABLE_VERSION/$DARKTABLE_APPIMAGE \
     > /tmp/$DARKTABLE_APPIMAGE
 
+# Check the shasum.  For the sha256sum -c to work, we must be
+# in the same directory as the target file
 cd /tmp
 echo $DARKTABLE_SHASUM | sha256sum -c
 
@@ -17,7 +19,12 @@ chmod ugo+x ./$DARKTABLE_APPIMAGE
 ./$DARKTABLE_APPIMAGE --appimage-extract
 cp ./$DARKTABLE_APPIMAGE /usr/bin
 ln -s /usr/bin/$DARKTABLE_APPIMAGE /usr/bin/darktable
-chmod ugo+x squashfs-root/org.darktable.darktable.desktop
-cp squashfs-root/org.darktable.darktable.desktop /usr/share/applications
+
+# For some reason, even when we copy all the icons to the right place,
+# GNOME won't find the icon.  So we hack the .desktop file to include
+# the absolute path to the icon.
+sed '/Icon=darktable/cIcon=/usr/share/icons/hicolor/scalable/apps/darktable.svg' \
+    squashfs-root/org.darktable.darktable.desktop > /usr/share/applications/org.darktable.darktable.desktop
+chmod ugo+x /usr/share/applications/org.darktable.darktable.desktop
 rsync -av squashfs-root/usr/share/icons/hicolor/ /usr/share/icons/hicolor
 
