@@ -36,6 +36,7 @@ modules:
       # - system76-power
       # Useful for Fedora 41
       - gnome-terminal
+      - chromium
     optfix:
       - google              
 
