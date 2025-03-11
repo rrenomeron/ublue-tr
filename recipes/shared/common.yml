@@ -35,8 +35,8 @@ modules:
       - lensfun
       # - system76-power
       # # Useful for Fedora 41
-      # - gnome-terminal
-      # - chromium
+      - gnome-terminal
+      - chromium
     optfix:
       - google              
 
