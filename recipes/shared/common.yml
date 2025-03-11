@@ -37,6 +37,7 @@ modules:
       # # Useful for Fedora 41
       - gnome-terminal
       - chromium
+      - netcat
     optfix:
       - google              
 
