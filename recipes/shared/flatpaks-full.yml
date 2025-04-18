@@ -35,8 +35,14 @@ modules:
         - org.gnome.TextEditor
         - org.gnome.font-viewer
         - org.gnome.FileRoller
-        - net.sourceforge.Hugin
-
+        - net.sourceforge.Hugin 
+        - io.github.dvlv.boxbuddyrs
+        - org.cockpit_project.CockpitClient
+        - org.gnome.SimpleScan
+        - rg.gustavoperedo.FontDownloader
+        - org.gnome.NautilusPreviewer
+        - sh.loft.devpod
+        
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.
       remove: []
