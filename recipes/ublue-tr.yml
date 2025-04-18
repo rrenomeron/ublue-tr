@@ -2,6 +2,10 @@
 name: ublue-tr
 # description will be included in the image's metadata
 description: A Universal Blue-based Fedora image with my personal preferences baked in
+alt-tags:
+  - latest
+  - 41
+  - gts
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/silverblue-main
