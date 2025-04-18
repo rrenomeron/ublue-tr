@@ -12,7 +12,7 @@ Features common to both images:
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps installed automatically at runtime
-- ``<CTRL><ALT>t`` opens a terminal
+- ``<CTRL><ALT>t`` opens a terminal, which is Gnome Terminal instead of Ptyxis
 - Single click to open items in Nautilus
 - Use smaller icons in Nautilus icon view
 - Sort directories first in Nautilus and GTK file choosers
@@ -30,6 +30,7 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Logo Menu enabled by default (like Bluefin)
 - Cascadia Code set as default monospace font
 - Windows have minimize and maximize buttons (like Ubuntu and Bluefin)
+- Use the ``gts`` tag for Fedora 41 and ``latest`` for Fedora 42
 
 For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenomero/bluefin-tr``):
 
@@ -41,8 +42,6 @@ For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenom
 - Rootful Docker disabled.  Users can set up 
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 
-We default to Fedora 40.  If you want
-Fedora 41, add ``-canary`` to the image name (e.g ``ublue-tr-canary``).
 
 ## Installation
 
