@@ -22,5 +22,5 @@ show-gamemode=false
 hide-forcequit=true
 show-boxbuddy=true
 
-[/org/gnome/shell/extensions/accent-directories]
+[org/gnome/shell/extensions/accent-directories]
 change-app-colors=false
