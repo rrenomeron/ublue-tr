@@ -17,7 +17,7 @@ modules:
       - google-roboto-fonts
       - google-crosextra-caladea-fonts
       - google-crosextra-carlito-fonts
-      - roboto-fontface-fonts
+      #- roboto-fontface-fonts
       - liberation-fonts
       - sil-charis-fonts
       - sil-charis-compact-fonts
