@@ -39,7 +39,7 @@ modules:
         - io.github.dvlv.boxbuddyrs
         - org.cockpit_project.CockpitClient
         - org.gnome.SimpleScan
-        - rg.gustavoperedo.FontDownloader
+        - org.gustavoperedo.FontDownloader
         - org.gnome.NautilusPreviewer
         - sh.loft.devpod
         
