@@ -60,6 +60,7 @@ modules:
     scripts:      
       - install-system76-wallpaper.sh
       - install-darktable-appimage.sh
+      - install-accent-icons-gnome-extension.sh
 
   - type: bling
     install:
