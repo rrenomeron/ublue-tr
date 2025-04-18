@@ -45,44 +45,24 @@ For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenom
 
 ## Installation
 
-> **Warning**  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
-
 First, install any [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) or
 [Universal Blue](https://universal-blue.org) desktop edition (preferably one that features
 GNOME, like Silverblue or Bluefin).
 
-To rebase an existing atomic Fedora installation to the latest build:
+Then use ``bootc switch`` to switch to the image you want.  For example:
+```
+sudo bootc switch ghcr.io/rrenomeron/ublue-tr:gts --enforce-container-sigpolicy
+```
+Then reboot
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/rrenomeron/ublue-tr:latest
-  ```
-  (Note: you can substiture one of the other image names if you want to use e.g. Bluefin.)
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/rrenomeron/ublue-tr:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
-
-- If you are on an existing Universal Blue-based atomic installation, you should just be able to
-  rebase directly:
-  ```
-  sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/rrenomeron/ublue-tr:latest
-  systemctl reboot
-  ```
-
-The `latest` tag will automatically point to the latest build.  
-
+```
+systemctl reboot
+```
 
 ## Installing via ISO
+
+> **Warning**
+> This has not been tested in a while, and probably does not work.
 
 If you have ``podman`` installed on your system, you can generate an offline ISO with the
 ``download-iso.sh`` script in this directory, like this:

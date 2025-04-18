@@ -23,6 +23,7 @@ jobs:
           # !! Add your recipes here 
           - bluefin-tr.yml
           - bluefin-dx-tr.yml
+          - bluefin-dx-tr-stable.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
