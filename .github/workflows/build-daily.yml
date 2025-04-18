@@ -22,8 +22,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - ublue-tr.yml
-          - ublue-tr-canary.yml          
+          - ublue-gts.yml
+          - ublue-latest.yml          
           - bluefin-dx-tr-canary.yml
     steps:
        # the build is fully handled by the reusable github action
