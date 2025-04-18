@@ -1,2 +1,2 @@
 [org/gnome/shell]
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com','blur-my-shell@aunetx', 'logomenu@aryan_k', 'system-monitor-next@paradoxxx.zero.gmail.com']
+enabled-extensions=['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com','blur-my-shell@aunetx', 'logomenu@aryan_k', 'system-monitor-next@paradoxxx.zero.gmail.com', 'accent-directories@taiwbi.com']
