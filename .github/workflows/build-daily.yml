@@ -22,9 +22,8 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - ublue-tr-gts.yml
           - ublue-tr-latest.yml          
-          - bluefin-dx-tr-canary.yml
+          - bluefin-dx-tr-latest.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image

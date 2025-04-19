@@ -21,9 +21,10 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here 
-          - bluefin-tr.yml
-          - bluefin-dx-tr.yml
+          - bluefin-dx-tr-gts.yml
           - bluefin-dx-tr-stable.yml
+          - bluefin-tr.yml
+          - ublue-tr-gts.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image

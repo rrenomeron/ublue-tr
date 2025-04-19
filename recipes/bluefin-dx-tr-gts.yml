@@ -1,11 +1,17 @@
 # image will be published to ghcr.io/<user>/<name>
-name: bluefin-dx-tr-canary
+name: bluefin-dx-tr
 # description will be included in the image's metadata
-description: A Project Bluefin DX image with the latest Fedora and my personal preferences baked in
+description: A Project Bluefin DX with my personal preferences baked in. This image follows Bluefin's gts image channel.
+
+alt-tags:
+  - gts
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: latest # latest is also supported if you want new updates ASAP
+# 9/30/24: We are entering our Fedora 40 era a little early
+# Change this back to 'gts' after Fedora 41 is released
+# and Bluefin GTS moves to Fedora 40
+image-version: gts
 
 # module configuration, executed in order
 # you can include multiple instances of the same module

@@ -6,13 +6,15 @@ The images contain either the [Fedora Silverblue](https://silverblue.fedoraproje
 [Project Bluefin](https://projectbluefin.io) operating
 system with custom modifications.  I am currently daily driving the Bluefin DX image.
 
-Features common to both images:
+Modifications common to both images:
 
 - Google Chrome RPM installed and set as default browser
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
 - Clocks set to AM/PM view with Weekday Display
-- Curated selection of Flatpak apps installed automatically at runtime
-- ``<CTRL><ALT>t`` opens a terminal, which is Gnome Terminal instead of Ptyxis
+- Curated selection of Flatpak apps installed automatically at runtime (this overrides Bluefin's
+  default flatpak choices)
+- Classic Gnome Terminal as default terminal
+- ``<CTRL><ALT>t`` opens a terminal
 - Single click to open items in Nautilus
 - Use smaller icons in Nautilus icon view
 - Sort directories first in Nautilus and GTK file choosers
@@ -30,18 +32,33 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Logo Menu enabled by default (like Bluefin)
 - Cascadia Code set as default monospace font
 - Windows have minimize and maximize buttons (like Ubuntu and Bluefin)
-- Use the ``gts`` tag for Fedora 41 and ``latest`` for Fedora 42
 
-For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-tr-dx`` or ``ghcr.io/rrenomero/bluefin-tr``):
+For the Bluefin Images: 
 
-- Developer mode enabled by default on the ``-dx`` image.  Switching between ``dx`` and non-``dx``
-  images via ``ujust`` not (yet) supported.
 - Default Fedora/GNOME keybindings, icons and fonts
 - Starship disabled by default (users can enable if needed)
 - GNOME Terminal as default terminal
 - Rootful Docker disabled.  Users can set up 
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
+- A different list of default flatpaks
 
+## Which Image? Which Version?
+
+Fedora Silverblue:
+
+- ``ghcr.io/rrenomeron/ublue-tr:gts`` -- Fedora 41, updated weekly
+- ``ghcr.io/rrenomeron/ublue-tr:latest`` -- Fedora 42, updated daily
+
+Bluefin (see 
+[Bluefin's docs](https://docs.projectbluefin.io/administration#upgrades-and-throttle-settings)
+for more details):
+
+- ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- Bluefin GTS without developer tools, updated weekly
+- ``ghcr.io/rrenomeron/bluefin-dx-tr:gts`` -- Bluefin GTS with developer tools ("DX image"),
+  updated weekly
+- ``ghcr.io/rrenomeron/bluefin-dx-tr:stable`` -- Bluefin Stable with developer tools, updated
+  weekly
+- ``ghcr.io/rrenomeron/bluefin-dx-tr:latest`` -- Bluefin Latest with developer tools, updated daily
 
 ## Installation
 
@@ -67,22 +84,24 @@ systemctl reboot
 If you have ``podman`` installed on your system, you can generate an offline ISO with the
 ``download-iso.sh`` script in this directory, like this:
 ```
-./download-iso.sh $IMAGE_NAME
+./download-iso.sh $IMAGE_NAME $TAG_NAME
 ```
-where ``$IMAGE_NAME`` is one of ``ublue-tr``, ``ublue-tr-canary``, ``bluefin-tr``,
-``bluefin-dx-tr-``, or ``bluefin-dx-tr-canary``.
+where ``$IMAGE_NAME`` is one of ``ublue-tr``, ``bluefin-tr``, or ``bluefin-dx-tr`` and
+``TAG_NAME`` corresponds to ``stable`` (``bluefin-dx-tr`` image only), ``gts``, or ``latest``.
 
 ## Verification
-> **Warning**  
-> This is still boilerplate from the original template.  It might not be accurate; I haven't
-> verified it.
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s
 [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the
 `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/blue-build/legacy-template
+cosign verify --key cosign.pub ghcr.io/rrenomeron/ublue-tr:gts
+cosign verify --key cosign.pub ghcr.io/rrenomeron/ublue-tr:latest
+cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-tr:gts
+cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:gts
+cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:stable
+cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:latest
 ```
 ## Building Locally
 
