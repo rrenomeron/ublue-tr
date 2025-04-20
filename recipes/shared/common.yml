@@ -38,6 +38,7 @@ modules:
       - gnome-terminal
       - chromium
       - netcat
+      - gnome-tweaks
     optfix:
       - google              
 
