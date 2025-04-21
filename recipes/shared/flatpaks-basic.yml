@@ -29,7 +29,7 @@ modules:
         - org.gnome.font-viewer
         - org.gnome.FileRoller
         - org.gnome.SimpleScan
-        - rg.gustavoperedo.FontDownloader
+        - org.gustavoperedo.FontDownloader
         - org.gnome.NautilusPreviewer
 
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
