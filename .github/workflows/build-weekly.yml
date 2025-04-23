@@ -25,6 +25,7 @@ jobs:
           - bluefin-dx-tr-stable.yml
           - bluefin-tr.yml
           - ublue-tr-gts.yml
+          - aurora-dx-tr.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
