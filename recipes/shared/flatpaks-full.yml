@@ -1,3 +1,9 @@
+# Note: The entire contents of flatpak-basic.yml is repeated here because
+# you can really only run this module once per build.  An appparent fix for this
+# (see https://github.com/blue-build/modules/pull/263) doesn't do what we need --
+# the fix only makes sure the effects of the 1st module run are not overwritten
+# (any subsequent runs are ignored).
+
 modules:
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -7,8 +13,6 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-        # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
         - com.discordapp.Discord        
         - org.gimp.GIMP 
         - org.libreoffice.LibreOffice        
