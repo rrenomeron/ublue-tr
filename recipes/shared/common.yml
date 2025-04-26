@@ -64,6 +64,7 @@ modules:
       - install-system76-wallpaper.sh
       - install-darktable-appimage.sh
       - install-accent-icons-gnome-extension.sh
+      - add-variety-to-autostart.sh
 
   - type: bling
     install:
