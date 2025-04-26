@@ -10,35 +10,6 @@ modules:
   repos:
   - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
   install:
-    - libvirt
-    - virt-manager
-    - gnome-tweaks      
-    - gnome-shell-extension-appindicator
-    - gnome-shell-extension-dash-to-dock 
-    - gnome-shell-extension-blur-my-shell
     - gnome-shell-extension-logo-menu
-    - code
-    - liberation-fonts
-    - cascadia-code-fonts
-    - yaru-theme
-    - docker-ce 
-    - docker-ce-cli
-    - docker-buildx-plugin
-    - docker-compose-plugin
-    - cockpit-machines
-    - cockpit-networkmanager
-    - cockpit-ostree
-    - cockpit-bridge
-    - cockpit-podman
-    - cockpit-selinux
-    - cockpit-storaged
-    - cockpit-system
-    - fastfetch
-
   remove: []
-  
-- type: script
-  snippets:
-    # Disable rootful docker
-    - "systemctl disable docker.service docker.socket"
 
