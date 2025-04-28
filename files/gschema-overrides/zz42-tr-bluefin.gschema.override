@@ -1,0 +1,10 @@
+# Bluefin overrides Gnome default fonts
+# So we override them back
+
+[org.gnome.desktop.wm.preferences]
+titlebar-font='Adwaita Sans 11'
+
+[org.gnome.desktop.interface]
+font-name='Adwaita Sans 11'
+document-font-name='Adwaita Sans 11'
+monospace-font-name='Adwaita Mono 13'

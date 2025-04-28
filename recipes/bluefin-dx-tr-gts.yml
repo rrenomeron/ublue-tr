@@ -20,3 +20,6 @@ modules:
   - from-file: shared/bluefin.yml
   - from-file: shared/flatpaks-full.yml
   - from-file: shared/ubuntu-wallpaper.yml
+  - type: gschema-overrides  # Override Bluefin's overrides of Gnome default fonts
+    include:
+      - zz41-tr-bluefin.gschema.override

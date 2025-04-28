@@ -1,0 +1,9 @@
+# Bluefin overrides Gnome default fonts
+# So we override them back
+
+[org.gnome.desktop.wm.preferences]
+titlebar-font='Cantarell 11'
+
+[org.gnome.desktop.interface]
+font-name='Cantarell 11'
+document-font-name='Cantarell 11'
