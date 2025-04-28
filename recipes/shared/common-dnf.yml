@@ -1,0 +1,64 @@
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+  # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
+  - type: script
+    scripts:
+      - enable-chrome-yum-repo.sh
+  - type: dnf
+    install:
+      packages:
+        - langpacks-en
+        - nss-tools
+        - google-roboto-mono-fonts
+        - google-roboto-fonts
+        - google-roboto-condensed-fonts
+        - google-crosextra-caladea-fonts
+        - google-crosextra-carlito-fonts
+        - liberation-fonts
+        - sil-charis-fonts
+        - sil-charis-compact-fonts
+        - sil-andika-fonts
+        - sil-andika-compact-fonts
+        - cascadia-code-nf-fonts
+        - cascadia-code-pl-fonts
+        - fontawesome-fonts
+        - libreoffice-opensymbol-fonts
+        - variety
+        - socat
+        - google-chrome-stable
+        - gnome-shell-extension-system-monitor-applet
+        - perl-Image-ExifTool
+        # Remove when we get Darktable on Flatpak
+        - exiv2
+        - lensfun
+        # - system76-power
+        # # Useful for Fedora 41
+        - gnome-terminal
+        - chromium
+        - netcat
+        - gnome-tweaks
+    optfix:
+      - google
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
+  - type: gschema-overrides  # this sets up our dconf overrides
+    include:
+      - zz1-tr-fedora.gschema.override
+  - type: script
+    snippets:
+    # We run this to put get our home CA in the system circle of trust
+      - "update-ca-trust extract"
+      - "systemctl enable -f google-chrome-ensure-symlinks-exist.service"
+    scripts:      
+      - install-system76-wallpaper.sh
+      - install-darktable-appimage.sh
+      - install-accent-icons-gnome-extension.sh
+      - add-variety-to-autostart.sh
+
+  - type: bling
+    install:
+      - dconf-update-service

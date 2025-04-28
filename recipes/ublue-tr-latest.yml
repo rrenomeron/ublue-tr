@@ -14,7 +14,7 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: shared/common.yml
+  - from-file: shared/common-dnf.yml
   - from-file: shared/ublue.yml
-  - from-file: shared/missing-dx-packages.yml
+  - from-file: shared/missing-dx-packages-dnf.yml
   - from-file: shared/flatpaks-full.yml
