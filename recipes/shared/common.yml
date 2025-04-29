@@ -7,48 +7,41 @@ modules:
   - type: script
     scripts:
       - enable-chrome-yum-repo.sh
-  - type: rpm-ostree
-    repos: []
-      
+  - type: dnf
     install:
-      - langpacks-en
-      - nss-tools
-      - google-roboto-mono-fonts
-      - google-roboto-fonts
-      - google-roboto-condensed-fonts
-      - google-crosextra-caladea-fonts
-      - google-crosextra-carlito-fonts
-      - liberation-fonts
-      - sil-charis-fonts
-      - sil-charis-compact-fonts
-      - sil-andika-fonts
-      - sil-andika-compact-fonts
-      - cascadia-code-nf-fonts
-      - cascadia-code-pl-fonts
-      - fontawesome-fonts
-      - libreoffice-opensymbol-fonts
-      - variety
-      - socat
-      - google-chrome-stable
-      - gnome-shell-extension-system-monitor-applet
-      - perl-Image-ExifTool
-      # Remove when we get Darktable on Flatpak
-      - exiv2
-      - lensfun
-      # - system76-power
-      # # Useful for Fedora 41
-      - gnome-terminal
-      - chromium
-      - netcat
-      - gnome-tweaks
+      packages:
+        - langpacks-en
+        - nss-tools
+        - google-roboto-mono-fonts
+        - google-roboto-fonts
+        - google-roboto-condensed-fonts
+        - google-crosextra-caladea-fonts
+        - google-crosextra-carlito-fonts
+        - liberation-fonts
+        - sil-charis-fonts
+        - sil-charis-compact-fonts
+        - sil-andika-fonts
+        - sil-andika-compact-fonts
+        - cascadia-code-nf-fonts
+        - cascadia-code-pl-fonts
+        - fontawesome-fonts
+        - libreoffice-opensymbol-fonts
+        - variety
+        - socat
+        - google-chrome-stable
+        - gnome-shell-extension-system-monitor-applet
+        - perl-Image-ExifTool
+        # Remove when we get Darktable on Flatpak
+        - exiv2
+        - lensfun
+        # - system76-power
+        # # Useful for Fedora 41
+        - gnome-terminal
+        - chromium
+        - netcat
+        - gnome-tweaks
     optfix:
-      - google              
-
-    remove: []
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - google
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
