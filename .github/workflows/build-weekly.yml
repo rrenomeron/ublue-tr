@@ -3,9 +3,10 @@ on:
   schedule:
     - cron: "41 7 * * 0" # Build 2h after Bluefin GTS
   push:
-    paths-ignore: # don't rebuild if only documentation has changed
+    paths-ignore: # don't rebuild if only stuff the workflow doesn't run has changed
       - "**.md"
       - "/*.sh"
+      - "iso-config/**"
       
   pull_request:
   workflow_dispatch: # allow manually triggering builds

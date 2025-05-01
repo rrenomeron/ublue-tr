@@ -4,9 +4,10 @@ on:
     - cron: "00 7 * * *" # build at 7:00 UTC every day 
                           # (ublue images start building at 05:04 UTC)
   push:
-    paths-ignore: # don't rebuild if only documentation has changed
+    paths-ignore: # don't rebuild if only stuff the workflow doesn't run has changed
       - "**.md"
-      - "/*.sh"
+      - "*.sh"
+      - "iso-config/**"
       
   pull_request:
   workflow_dispatch: # allow manually triggering builds

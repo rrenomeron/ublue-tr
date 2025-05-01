@@ -8,6 +8,11 @@ modules:
     - ublue-get-files-from-bluefin.sh
 - type: dnf
   repos:
+    files:
+      # These repos have the Readymade installer, which is used in the ISO
+      # build process.  They already exist on Bluefin.
+      - https://repos.fyralabs.com/terra$releasever
+      - https://repos.fyralabs.com/terra$releasever-extras
     copr:
       - ublue-os/staging
   install:
