@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
 # These are packages from the Bluefin and Aurora DX images that
 # We generally install by default.
 

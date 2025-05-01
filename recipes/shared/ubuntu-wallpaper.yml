@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
 # Moving this to its own module so we can
 # restrict which builds use it
 modules:
