@@ -6,13 +6,19 @@ modules:
 - type: script
   scripts:
     - ublue-get-files-from-bluefin.sh
+  snippets:
+    - "dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release"
+    - "dnf5 -y install terra-release-extras || true"
+    - 'dnf5 config-manager setopt "terra*".enabled=0'
 - type: dnf
   repos:
-    files:
+    # files:
       # These repos have the Readymade installer, which is used in the ISO
       # build process.  They already exist on Bluefin.
-      - https://repos.fyralabs.com/terra$releasever
-      - https://repos.fyralabs.com/terra$releasever-extras
+      # However, this doesn't work with the dnf plugin, so we use
+      # the script snippets above, copypasta from Bluefin
+      # - https://repos.fyralabs.com/terra%OS_VERSION%
+      # - https://repos.fyralabs.com/terra%OS_VERSION%-extras
     copr:
       - ublue-os/staging
   install:
