@@ -16,4 +16,4 @@ modules:
   - from-file: shared/ublue.yml
   - from-file: shared/missing-dx-packages.yml
   - from-file: shared/flatpaks-full.yml
-  - from-file: shared/ubuntu-wallpaper.yml
+  # - from-file: shared/ubuntu-wallpaper.yml
