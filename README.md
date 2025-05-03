@@ -53,12 +53,15 @@ Bluefin (see
 [Bluefin's docs](https://docs.projectbluefin.io/administration#upgrades-and-throttle-settings)
 for more details):
 
-- ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- Bluefin GTS without developer tools, updated weekly
 - ``ghcr.io/rrenomeron/bluefin-dx-tr:gts`` -- Bluefin GTS with developer tools ("DX image"),
   updated weekly
 - ``ghcr.io/rrenomeron/bluefin-dx-tr:stable`` -- Bluefin Stable with developer tools, updated
   weekly
-- ``ghcr.io/rrenomeron/bluefin-dx-tr:latest`` -- Bluefin Latest with developer tools, updated daily
+- ``ghcr.io/rrenomeron/bluefin-dx-tr:latest`` -- Bluefin Latest with developer tools, updated
+  daily
+- ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- **DEPRECATED** Bluefin GTS without developer tools, last
+  build will be on May 11, 2025.  Use ``bootc switch`` to migrate to
+  ``ghcr.io/rrenomeron/bluefin-dx-tr:gts``, or if you don't want the developer tools, ``ghcr.io/ublue-os/bluefin:gts``.
 
 ## Installation
 
