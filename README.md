@@ -21,6 +21,7 @@ Modifications common to both images:
 - Dark styles enabled by default
 - [System76 wallpaper collection](https://system76.com/merch/desktop-wallpapers)
 - Historical Ubuntu wallpapers, mostly from the LTS versions
+- Intel One Mono set as default monospace font
 
 For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
@@ -30,7 +31,6 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Dash-to-Dock enabled by default, skipping Overview on login
 - Appindicators enabled by default
 - Logo Menu enabled by default (like Bluefin)
-- Cascadia Code set as default monospace font
 - Windows have minimize and maximize buttons (like Ubuntu and Bluefin)
 
 For the Bluefin Images: 

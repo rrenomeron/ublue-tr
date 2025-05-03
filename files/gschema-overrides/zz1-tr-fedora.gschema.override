@@ -31,7 +31,7 @@ clock-format='12h'
 clock-show-weekday=true
 color-scheme='prefer-dark'
 show-battery-percentage=true
-monospace-font-name='Cascadia Code 14'
+monospace-font-name='Intel One Mono 14'
 
 [org.gtk.Settings.FileChooser]
 sort-directories-first=true
