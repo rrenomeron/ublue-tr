@@ -25,5 +25,6 @@ modules:
   install:
     packages:
       - gnome-shell-extension-logo-menu
+      - intel-one-mono-fonts
 
 
