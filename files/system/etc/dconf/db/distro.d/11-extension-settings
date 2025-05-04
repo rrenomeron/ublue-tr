@@ -6,6 +6,9 @@ icon-display=false
 memory-graph-width=20
 net-graph-width=20
 
+[org/gnome/shell/extensions/system-monitor-next-applet]
+custom-monitor-command='flatpak run io.missioncenter.MissionCenter'
+
 # When enabled for the first time, it appears to default to the 
 # Gnome logo (but this isn't an issue on Bluefin).  We'll force
 # the Universal Blue logo just in case.
