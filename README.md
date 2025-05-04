@@ -21,7 +21,7 @@ Modifications common to both images:
 - Dark styles enabled by default
 - [System76 wallpaper collection](https://system76.com/merch/desktop-wallpapers)
 - Historical Ubuntu wallpapers, mostly from the LTS versions
-- Intel One Mono set as default monospace font
+- [Intel One Mono](https://www.intel.com/content/www/us/en/company-overview/one-monospace-font.html) set as default monospace font
 
 For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 
