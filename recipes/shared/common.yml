@@ -53,9 +53,11 @@ modules:
     snippets:
     # We run this to put get our home CA in the system circle of trust
       - "update-ca-trust extract"
+    # Make sure /opt symlinks are set up properly, because Google Chrome install is sketch
       - "systemctl enable -f google-chrome-ensure-symlinks-exist.service"
     scripts:      
       - install-system76-wallpaper.sh
+      - install-framework-wallpaper.sh
       - install-darktable-appimage.sh
       - install-accent-icons-gnome-extension.sh
       - add-variety-to-autostart.sh
