@@ -36,8 +36,6 @@ modules:
         - exiv2
         - lensfun
         # - system76-power
-        # # Useful for Fedora 41
-        - gnome-terminal
         - chromium
         - netcat
         - gnome-tweaks

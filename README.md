@@ -13,7 +13,6 @@ Modifications common to both images:
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps installed automatically at runtime (this overrides Bluefin's
   default flatpak choices)
-- Classic Gnome Terminal as default terminal
 - ``<CTRL><ALT>t`` opens a terminal
 - Single click to open items in Nautilus
 - Use smaller icons in Nautilus icon view
@@ -37,7 +36,6 @@ For the Bluefin Images:
 
 - Default Fedora/GNOME keybindings, icons and fonts
 - Starship disabled by default (users can enable if needed)
-- GNOME Terminal as default terminal
 - Rootful Docker disabled.  Users can set up 
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 - A different list of default flatpaks
