@@ -59,7 +59,9 @@ for more details):
   daily
 - ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- **DEPRECATED** Bluefin GTS without developer tools, last
   build will be on May 11, 2025.  Use ``bootc switch`` to migrate to
-  ``ghcr.io/rrenomeron/bluefin-dx-tr:gts``, or if you don't want the developer tools, ``ghcr.io/ublue-os/bluefin:gts``.
+  ``ghcr.io/rrenomeron/bluefin-dx-tr:gts``, or if you don't want the developer tools, 
+  ``ghcr.io/ublue-os/bluefin:gts``.  Automatic migration to ``bluefin-dx-tr`` will happen on or
+  about May 18th.
 
 ## Installation
 
