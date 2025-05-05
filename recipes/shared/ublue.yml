@@ -5,8 +5,6 @@ modules:
     - source: dconf-ublue
       destination: /etc/dconf/db/distro.d
 - type: script
-  scripts:
-    - ublue-get-files-from-bluefin.sh
   snippets:
     - "dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release"
     - "dnf5 -y install terra-release-extras || true"
@@ -22,9 +20,11 @@ modules:
       # - https://repos.fyralabs.com/terra%OS_VERSION%-extras
     copr:
       - ublue-os/staging
+      - ublue-os/packages
   install:
     packages:
       - gnome-shell-extension-logo-menu
       - intel-one-mono-fonts
+      - bluefin-backgrounds
 
 
