@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+if [ -d $HOME/Nextcloud ]; then
+    cd $HOME
+    for dir in Documents Music Pictures Templates Videos; do
+        if [ ! -d $dir/Nextcloud ]; then
+            echo "Creating link for ~/Nextcloud/$dir"
+            ln -s ~/Nextcloud/$dir $dir/Nextcloud
+        fi
+    done 
+fi
