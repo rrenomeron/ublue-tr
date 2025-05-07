@@ -16,3 +16,7 @@ modules:
   - from-file: shared/common.yml
   - from-file: shared/bluefin.yml
   - from-file: shared/flatpaks-basic.yml
+  - type: dnf
+    install:
+      packages:
+        - intel-one-mono-fonts
