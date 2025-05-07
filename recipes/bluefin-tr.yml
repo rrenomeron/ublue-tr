@@ -20,3 +20,6 @@ modules:
     install:
       packages:
         - intel-one-mono-fonts
+  - type: gschema-overrides  # Override Bluefin's overrides of Gnome default fonts
+    include:
+      - zz41-tr-bluefin.gschema.override
