@@ -31,7 +31,6 @@ modules:
         - socat
         - google-chrome-stable
         - gnome-shell-extension-system-monitor-applet
-        - perl-Image-ExifTool
         # - system76-power
         - chromium
         - netcat
