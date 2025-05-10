@@ -33,6 +33,7 @@ modules:
         - cockpit-storaged
         - cockpit-system
         - fastfetch
+        - intel-one-mono-fonts
     
   - type: script
     snippets:
