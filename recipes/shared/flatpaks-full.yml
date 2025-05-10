@@ -20,7 +20,8 @@ modules:
         - org.libreoffice.LibreOffice        
         - com.nextcloud.desktopclient.nextcloud
         - com.spotify.Client 
-        - org.audacityteam.Audacity 
+        - org.audacityteam.Audacity
+        - org.darktable.Darktable 
         - org.sqlitebrowser.sqlitebrowser 
         - org.openshot.OpenShot 
         - io.dbeaver.DBeaverCommunity
