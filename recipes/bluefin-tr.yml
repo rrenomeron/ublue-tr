@@ -23,3 +23,10 @@ modules:
   - type: gschema-overrides  # Override Bluefin's overrides of Gnome default fonts
     include:
       - zz41-tr-bluefin.gschema.override
+  - type: files
+    files:
+      - source: bluefin-tr-dx-migration
+        destination: /
+  - type: script
+    snippets:
+      - "systemctl enable tr-migrate-to-dx.service"
