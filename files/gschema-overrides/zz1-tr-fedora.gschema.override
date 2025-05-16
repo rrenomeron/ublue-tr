@@ -47,3 +47,7 @@ sort-directories-first=true
 # on all builds
 [org.gnome.desktop.peripherals.touchpad]
 tap-to-click=true
+
+[org.gnome.Ptyxis]
+default-rows=32
+default-columns=128
