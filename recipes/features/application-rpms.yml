@@ -15,18 +15,8 @@ modules:
         - socat
         - google-chrome-stable
         - gnome-shell-extension-system-monitor-applet
-        # - system76-power
         - chromium
         - netcat
-        - gnome-tweaks
-        - cockpit-machines
-        - cockpit-networkmanager
-        - cockpit-ostree
-        - cockpit-bridge
-        - cockpit-podman
-        - cockpit-selinux
-        - cockpit-storaged
-        - cockpit-system
         - fastfetch
     optfix:
       - google

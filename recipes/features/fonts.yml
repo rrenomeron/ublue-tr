@@ -3,8 +3,6 @@ modules:
   - type: dnf
     install:
       packages:
-        - langpacks-en
-        - nss-tools
         - google-roboto-mono-fonts
         - google-roboto-fonts
         - google-roboto-condensed-fonts

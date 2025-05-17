@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
+# Note: The can only be one list of flatpaks becuase
+# you can really only run this module once per build.  An appparent fix for this
+# (see https://github.com/blue-build/modules/pull/263) doesn't do what we need --
+# the fix only makes sure the effects of the 1st module run are not overwritten
+# (any subsequent runs are ignored).
+
+modules:
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - com.discordapp.Discord        
+        - org.gimp.GIMP 
+        - org.libreoffice.LibreOffice        
+        - com.nextcloud.desktopclient.nextcloud
+        - com.spotify.Client 
+        - org.audacityteam.Audacity
+        - org.darktable.Darktable 
+        - org.sqlitebrowser.sqlitebrowser 
+        - org.openshot.OpenShot 
+        - io.dbeaver.DBeaverCommunity
+        - org.gnome.Totem
+        - org.gnome.Snapshot
+        - us.zoom.Zoom
+        - ca.desrt.dconf-editor
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.Weather
+        - org.gnome.Evince 
+        - org.gnome.Loupe
+        - org.gnome.baobab
+        - org.fedoraproject.MediaWriter
+        - io.github.flattool.Warehouse
+        - org.gnome.Logs
+        - org.gnome.Calculator
+        - org.gnome.TextEditor
+        - org.gnome.font-viewer
+        - org.gnome.FileRoller
+        - net.sourceforge.Hugin 
+        - io.github.dvlv.boxbuddyrs
+        - org.cockpit_project.CockpitClient
+        - org.gnome.SimpleScan
+        - org.gustavoperedo.FontDownloader
+        - org.gnome.NautilusPreviewer
+        - sh.loft.devpod
+        - me.iepure.devtoolbox
+        - com.github.PintaProject.Pinta
+        - io.podman_desktop.PodmanDesktop
+        - io.missioncenter.MissionCenter
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
+      remove: []

@@ -10,7 +10,6 @@ modules:
         - gnome-shell-extension-appindicator
         - gnome-shell-extension-dash-to-dock 
         - gnome-shell-extension-blur-my-shell
-        - gnome-shell-extension-system-monitor-applet
         - gnome-tweaks
 
   - type: gschema-overrides  # this sets up our dconf overrides

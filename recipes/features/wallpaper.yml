@@ -1,13 +1,5 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: /
-  # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
-  - type: script
-    scripts:
-      - enable-chrome-yum-repo.sh
   - type: dnf
     repos:
       copr:
@@ -15,6 +7,20 @@ modules:
     install:
       packages:
         - bluefin-backgrounds
+        - gnome-backgrounds-extras
+        - f41-backgrounds-base
+        - f40-backgrounds-base
+        - f39-backgrounds-base
+        - f35-backgrounds-base
+        - f32-backgrounds-base
+        - f30-backgrounds-base
+        - f30-backgrounds-extras-base
+        - f29-backgrounds-base
+        - f26-backgrounds-extras-base
+        - f25-backgrounds-extras-base
+        - f24-backgrounds-extras-base
+        - f23-backgrounds-extras-base
+        - desktop-backgrounds-basic
         - variety
 
   - type: script
