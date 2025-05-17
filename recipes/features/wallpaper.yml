@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+  # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
+  - type: script
+    scripts:
+      - enable-chrome-yum-repo.sh
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+    install:
+      packages:
+        - bluefin-backgrounds
+        - variety
+
+  - type: script
+    scripts:      
+      - install-system76-wallpaper.sh
+      - install-framework-wallpaper.sh
+      - add-variety-to-autostart.sh
+

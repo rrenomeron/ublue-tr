@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+  - type: script
+    snippets:
+    # We run this to put get our home CA in the system circle of trust
+      - "update-ca-trust extract"

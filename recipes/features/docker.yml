@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules: 
+  - type: dnf
+    repos:
+      files:
+        - docker-ce.repo
+    install:
+      packages:
+        - docker-ce 
+        - docker-ce-cli
+        - docker-buildx-plugin
+        - docker-compose-plugin
+  - type: script
+    snippets:
+      # Disable rootful docker
+      - "systemctl disable docker.service docker.socket"
+

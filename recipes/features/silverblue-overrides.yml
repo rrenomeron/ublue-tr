@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+- type: files
+  files:
+    - source: dconf-ublue
+      destination: /etc/dconf/db/distro.d
+
+
