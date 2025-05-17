@@ -53,6 +53,8 @@ modules:
         - com.github.PintaProject.Pinta
         - io.podman_desktop.PodmanDesktop
         - io.missioncenter.MissionCenter
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
         
       # only normal flatpak applications are (like Floorp Lightning web browser in this example).
       # Installing different branches of the same Flatpak is not supported.

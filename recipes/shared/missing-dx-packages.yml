@@ -19,7 +19,6 @@ modules:
         - code
         - liberation-fonts
         - cascadia-code-fonts
-        - yaru-theme
         - docker-ce 
         - docker-ce-cli
         - docker-buildx-plugin
