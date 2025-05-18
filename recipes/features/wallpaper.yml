@@ -12,15 +12,7 @@ modules:
         - f40-backgrounds-base
         - f39-backgrounds-base
         - f35-backgrounds-base
-        - f32-backgrounds-base
-        - f30-backgrounds-base
-        - f30-backgrounds-extras-base
-        - f29-backgrounds-base
         - f26-backgrounds-extras-base
-        - f25-backgrounds-extras-base
-        - f24-backgrounds-extras-base
-        - f23-backgrounds-extras-base
-        - desktop-backgrounds-basic
         - variety
 
   - type: script
