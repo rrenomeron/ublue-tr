@@ -16,4 +16,4 @@ WantedBy=multi-user.target
 EOF
 
 # Uncomment after May 11, 2025
-# systemctl enable bluefin-tr-migrate-to-dx.sh
+systemctl enable bluefin-tr-migrate-to-dx.sh
