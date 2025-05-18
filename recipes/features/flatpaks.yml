@@ -32,7 +32,7 @@ modules:
         - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
         - org.gnome.Weather
-        - org.gnome.Evince 
+        - org.gnome.Papers
         - org.gnome.Loupe
         - org.gnome.baobab
         - org.fedoraproject.MediaWriter
