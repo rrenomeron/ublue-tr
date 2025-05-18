@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cat - >> /usr/lib/systemd/system/tr-migrate-to-dx.service << EOF
+cat - >> /usr/lib/systemd/system/bluefin-tr-migrate-to-dx.service << EOF
 [Unit]
 Description=Migrate system from discontinued bluefin-tr image to bluefin-dx-tr
 Wants=network-online.target
