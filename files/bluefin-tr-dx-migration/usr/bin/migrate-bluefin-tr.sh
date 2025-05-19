@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 function notify_user() {    
     logger $1
     echo $1
