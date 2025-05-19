@@ -9,7 +9,7 @@ After=network-online.target
 
 [Service]
 Type=oneshot
-Exec=bootc switch ghcr.io/rrenomeron/bluefin-dx-tr:gts
+ExecStart=/usr/bin/migrate-bluefin-tr.sh
 
 [Install]
 WantedBy=multi-user.target
