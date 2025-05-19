@@ -28,5 +28,7 @@ modules:
       - source: bluefin-tr-dx-migration
         destination: /
   - type: script
+    scripts:
+      - bluefin-tr-migrate-to-dx.sh
     snippets:
       - "systemctl enable tr-migrate-to-dx.service"
