@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules: 
+  - type: dnf
+    repos:
+      files:
+        - vscode.repo
+    install:
+      packages:
+        - code

@@ -5,6 +5,7 @@ modules:
   - from-file: features/system-files.yml
   - from-file: features/add-tr-ca.yml
   - from-file: features/application-rpms.yml
+  - from-file: features/vscode.yml
   - from-file: features/virtualization.yml
   - from-file: features/docker.yml
   - from-file: features/cockpit.yml
