@@ -1,10 +1,10 @@
-# Rich Renomeron's Builds of Fedora Silverblue and Project Bluefin
+# Rich Renomeron's Builds of Fedora Silverblue and Bluefin
 
-These are [Universal Blue](https://universal-blue.org)-based images built via
-[BlueBuild](https://bulue-build.org)'s tools with a bunch of my personal preferences baked in.
+These are Bootable Container images built from [Universal Blue](https://universal-blue.org) base images
+with [BlueBuild](https://bulue-build.org)'s tools that have a bunch of my personal preferences baked in.
 The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) or 
-[Project Bluefin](https://projectbluefin.io) operating
-system with custom modifications.  I am currently daily driving the Bluefin DX image.
+[Bluefin](https://projectbluefin.io) operating
+system with custom modifications.  The image based on Bluefin DX (``bluefin-dx-tr``) is my daily driver.
 
 Modifications common to both images:
 
@@ -117,8 +117,7 @@ bluebuild build --build-driver=podman [recipe file]
   something else?)
 - Fix ISO generation issues for better 1st run experience on a new device
 - Look at features from [Secure Blue](https://github.com/secureblue/secureblue) to incorporate
-- Re-evaluate some Bluefin choices we disagree with (e.g. Mission Center over GNOME
-  System Monitor)
+- Re-evaluate some Bluefin choices we disagree with
 
 
 
