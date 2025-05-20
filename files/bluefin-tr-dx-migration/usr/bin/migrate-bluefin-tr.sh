@@ -27,7 +27,7 @@ function wait_for_rpm_ostree() {
 
 wait_for_rpm_ostree
 notify_user "This system is being migrated to bluefin-dx-tr.  You can continue working as the migration proceeds"
-if ! bootc switch ghcr.io/rrenomeron/bluefin-dx-tr:gts; then
+if ! bootc switch ghcr.io/rrenomeron/bluefin-dx-tr:gts --enforce-container-sigpolicy; then
     notify_failure "Migration failed.  We will try again on next boot, or you can run "sudo bootc switch ghcr.io/rrenomeron/bluefin-dx-tr:gts" manually."
 fi 
 
