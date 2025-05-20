@@ -3,11 +3,11 @@
 function notify_user() {    
     logger $1
     echo $1
-    user_name=$(loginctl list-sessions --output=json | jq -r '.[].user')
-    uid=$(loginctl list-sessions --output=json | jq -r '.[].uid')
+    user_name=$(loginctl list-sessions --json short | jq -r '.[].user'| head -1)
+    uid=$(loginctl list-sessions --json short | jq -r '.[].uid' | head -1)
     xdg_runtime_path="/run/user/$uid"
     display_var=$(printenv DISPLAY)
-    sudo -u "$user_name" DBUS_SESSION_BUS_ADDRESS=unix:path="$xdg_runtime_path"/bus DISPLAY="$display_var" notify-send "Google Chrome Update Service" "$1" --app-name="Google Chrome Update Service" -u NORMAL
+    sudo -u "$user_name" DBUS_SESSION_BUS_ADDRESS=unix:path="$xdg_runtime_path"/bus DISPLAY="$display_var" notify-send "Bluefin-TR Update Service" "$1" --app-name="Bluefin-TR Update Service" -u NORMAL
 }
 
 function notify_failure() {
@@ -25,7 +25,6 @@ function wait_for_rpm_ostree() {
     done
 }
 
-set -eou pipefail
 wait_for_rpm_ostree
 notify_user "This system is being migrated to bluefin-dx-tr.  You can continue working as the migration proceeds"
 if ! bootc switch ghcr.io/rrenomeron/bluefin-dx-tr:gts; then
