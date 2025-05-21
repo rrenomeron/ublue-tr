@@ -16,10 +16,8 @@ image-version: gts
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: shared/common.yml
-  - from-file: shared/bluefin.yml
-  - from-file: shared/flatpaks-full.yml
-  - from-file: shared/ubuntu-wallpaper.yml
+  - from-file: features/bluefin-features.yml
+  - from-file: features/wallpaper-extra.yml
   - type: gschema-overrides  # Override Bluefin's overrides of Gnome default fonts
     include:
       - zz41-tr-bluefin.gschema.override

@@ -13,7 +13,10 @@ image-version: stable
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: shared/common.yml
-  # - from-file: shared/aurora.yml
-  - from-file: shared/flatpaks-full.yml
-  # - from-file: shared/ubuntu-wallpaper.yml
+  - from-file: features/system-files.yml
+  - from-file: features/add-tr-ca.yml
+  - from-file: features/application-rpms.yml
+  - from-file: features/fonts.yml
+  - from-file: features/bluefin-overrides.yml
+  - from-file: features/wallpaper.yml
+  - from-file: features/flatpaks.yml

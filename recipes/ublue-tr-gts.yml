@@ -12,8 +12,4 @@ image-version: 41 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: shared/common.yml
-  - from-file: shared/ublue.yml
-  - from-file: shared/missing-dx-packages.yml
-  - from-file: shared/flatpaks-full.yml
-  # - from-file: shared/ubuntu-wallpaper.yml
+  - from-file: features/silverblue-features.yml
