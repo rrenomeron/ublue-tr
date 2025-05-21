@@ -12,6 +12,6 @@ modules:
         - docker-compose-plugin
   - type: script
     snippets:
-      # Disable rootful docker
+      # Disable the abomination known as rootful Docker
       - "systemctl disable docker.service docker.socket"
 

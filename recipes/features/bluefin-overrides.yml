@@ -6,8 +6,9 @@ modules:
     destination: /etc/dconf/db/distro.d
 - type: script
   snippets:
+  # Disable VPNs we don't use
   - "systemctl disable tailscaled"
-  scripts:
-    - bluefin-fix-hidden-apps.sh
-    - bluefin-disable-rootful-docker.sh
-    - bluefin-disable-starship.sh
+  # Disable the abomination known as rootful Docker
+  - "systemctl disable docker.service docker.socket"
+  # Disable Starship by default
+  - "sed -i '/starship init bash/d' /etc/bashrc"

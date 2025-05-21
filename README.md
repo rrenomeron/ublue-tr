@@ -57,11 +57,11 @@ for more details):
   weekly
 - ``ghcr.io/rrenomeron/bluefin-dx-tr:latest`` -- Bluefin Latest with developer tools, updated
   daily
-- ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- **DEPRECATED** Bluefin GTS without developer tools, last
-  build will be on May 11, 2025.  Use ``bootc switch`` to migrate to
+- ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- **NO LONGER SUPPORTED** Bluefin GTS without developer tools, last
+  build was on May 20, 2025.  Use ``bootc switch`` to migrate to
   ``ghcr.io/rrenomeron/bluefin-dx-tr:gts``, or if you don't want the developer tools, 
-  ``ghcr.io/ublue-os/bluefin:gts``.  Automatic migration to ``bluefin-dx-tr`` will happen on or
-  about May 18th.
+  ``ghcr.io/ublue-os/bluefin:gts``.  The system will try to automatically migrate you to
+  ``bluefin-dx-tr:gts`` but your mileage may vary.
 
 ## Installation
 
@@ -115,7 +115,8 @@ bluebuild build --build-driver=podman [recipe file]
 
 - Figure out what my development container workflow is going to look like (distrobox? toolbox?
   something else?)
-- Fix ISO generation issues for better 1st run experience on a new device
+- Fix ISO generation issues for better 1st run experience on a new device, leverage what Bluefin
+  is doing if possible
 - Look at features from [Secure Blue](https://github.com/secureblue/secureblue) to incorporate
 - Re-evaluate some Bluefin choices we disagree with
 

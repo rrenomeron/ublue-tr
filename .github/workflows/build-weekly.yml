@@ -25,7 +25,6 @@ jobs:
           # !! Add your recipes here 
           - bluefin-dx-tr-gts.yml
           - bluefin-dx-tr-stable.yml
-          - bluefin-tr.yml
           - ublue-tr-gts.yml
           - aurora-dx-tr.yml
           - bazzite-tr.yml
