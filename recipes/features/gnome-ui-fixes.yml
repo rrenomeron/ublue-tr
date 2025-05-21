@@ -15,9 +15,10 @@ modules:
   - type: gschema-overrides  # this sets up our dconf overrides
     include:
       - zz1-tr-fedora.gschema.override
-  - type: script
-    scripts:      
-      - install-accent-icons-gnome-extension.sh
+  - type: gnome-extensions
+    install:
+      - Accent Icons
+      - Weather or Not
 
   - type: bling
     install:
