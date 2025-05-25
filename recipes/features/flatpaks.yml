@@ -15,19 +15,17 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        - com.discordapp.Discord        
-        - org.gimp.GIMP 
-        - org.libreoffice.LibreOffice        
-        - com.nextcloud.desktopclient.nextcloud
-        - com.spotify.Client 
-        - org.audacityteam.Audacity
-        - org.darktable.Darktable 
-        - org.sqlitebrowser.sqlitebrowser 
-        - org.openshot.OpenShot 
-        - io.dbeaver.DBeaverCommunity
-        - org.gnome.Totem
-        - org.gnome.Snapshot
-        - us.zoom.Zoom
+        # Base Flatpaks
+        # (System Mgmt, Basic Productivity)
+        - org.gtk.Gtk3theme.adw-gtk3
+        - org.gtk.Gtk3theme.adw-gtk3-dark
+        - io.missioncenter.MissionCenter
+        - org.cockpit_project.CockpitClient
+        - org.gnome.Logs
+        - org.gnome.Calculator
+        - org.gnome.TextEditor
+        - org.gnome.font-viewer
+        - org.gnome.FileRoller        
         - ca.desrt.dconf-editor
         - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
@@ -35,24 +33,37 @@ modules:
         - org.gnome.Papers
         - org.gnome.Loupe
         - org.gnome.baobab
+        - com.github.rafostar.Clapper
+        - org.gnome.Snapshot 
+        - org.libreoffice.LibreOffice        
+        - com.nextcloud.desktopclient.nextcloud
+        - us.zoom.Zoom
         - org.fedoraproject.MediaWriter
         - io.github.flattool.Warehouse
-        - org.gnome.Logs
-        - org.gnome.Calculator
-        - org.gnome.TextEditor
-        - org.gnome.font-viewer
-        - org.gnome.FileRoller
-        - net.sourceforge.Hugin 
-        - io.github.dvlv.boxbuddyrs
-        - org.cockpit_project.CockpitClient
         - org.gnome.SimpleScan
         - org.gustavoperedo.FontDownloader
         - org.gnome.NautilusPreviewer
+        - com.github.PintaProject.Pinta
+        - org.gnome.clocks
+        - org.gnome.Connections
+
+        # Personal Internet Life
+        - com.discordapp.Discord
+        - com.spotify.Client
+
+        # Media/Art Production
+        - org.gimp.GIMP 
+        - org.audacityteam.Audacity
+        - org.darktable.Darktable
+        - org.openshot.OpenShot 
+        - net.sourceforge.Hugin 
+
+        # Developer Tools
+        - org.sqlitebrowser.sqlitebrowser 
+        - io.dbeaver.DBeaverCommunity
+        - io.github.dvlv.boxbuddyrs
         - sh.loft.devpod
         - me.iepure.devtoolbox
-        - com.github.PintaProject.Pinta
         - io.podman_desktop.PodmanDesktop
-        - io.missioncenter.MissionCenter
-        - org.gtk.Gtk3theme.adw-gtk3
-        - org.gtk.Gtk3theme.adw-gtk3-dark
+
       remove: []
