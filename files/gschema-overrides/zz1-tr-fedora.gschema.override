@@ -46,3 +46,6 @@ sort-directories-first=true
 [org.gnome.Ptyxis]
 default-rows=32
 default-columns=128
+
+[org.gnome.shell.extensions.system-monitor-next-applet]
+custom-monitor-command='flatpak run io.missioncenter.MissionCenter'
