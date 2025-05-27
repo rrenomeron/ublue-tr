@@ -43,11 +43,6 @@ startup-mode='cwd'
 [org.gtk.gtk4.settings.file-chooser]
 sort-directories-first=true
 
-# Per upstream, we can remove this when we default to Fedora 40
-# on all builds
-[org.gnome.desktop.peripherals.touchpad]
-tap-to-click=true
-
 [org.gnome.Ptyxis]
 default-rows=32
 default-columns=128
