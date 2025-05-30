@@ -1,10 +1,11 @@
-# Rich Renomeron's Builds of Fedora Silverblue and Bluefin
+# Custom Bluefin and Fedora Silverblue Bootable Containers
 
-These are Bootable Container images built from [Universal Blue](https://universal-blue.org) base images
-with [BlueBuild](https://bulue-build.org)'s tools that have a bunch of my personal preferences baked in.
+These are [Bootable Container](https://containers.github.io/bootable/) images built from 
+[Universal Blue](https://universal-blue.org) base images
+with [BlueBuild](https://bulue-build.org)'s tools.
 The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) or 
 [Bluefin](https://projectbluefin.io) operating
-system with custom modifications.  The image based on Bluefin DX (``bluefin-dx-tr``) is my daily driver.
+system with with my personal preferences baked in.  The image based on Bluefin DX (``bluefin-dx-tr``) is my daily driver.
 
 Modifications common to both images:
 
@@ -13,7 +14,6 @@ Modifications common to both images:
 - Clocks set to AM/PM view with Weekday Display
 - Curated selection of Flatpak apps installed automatically at runtime (this overrides Bluefin's
   default flatpak choices)
-- ``<CTRL><ALT>t`` opens a terminal
 - Single click to open items in Nautilus
 - Use smaller icons in Nautilus icon view
 - Sort directories first in Nautilus and GTK file choosers
@@ -31,10 +31,10 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Appindicators enabled by default
 - Logo Menu enabled by default (like Bluefin)
 - Windows have minimize and maximize buttons (like Ubuntu and Bluefin)
+- ``<CTRL><ALT>t`` opens a terminal
 
-For the Bluefin Images: 
+For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-dx-tr``):
 
-- Default Fedora/GNOME keybindings, icons and fonts
 - Starship disabled by default (users can enable if needed)
 - Rootful Docker disabled.  Users can set up 
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
@@ -51,17 +51,12 @@ Bluefin (see
 [Bluefin's docs](https://docs.projectbluefin.io/administration#upgrades-and-throttle-settings)
 for more details):
 
-- ``ghcr.io/rrenomeron/bluefin-dx-tr:gts`` -- Bluefin GTS with developer tools ("DX image"),
+- ``ghcr.io/rrenomeron/bluefin-dx-tr:gts`` -- [Bluefin GTS](https://docs.projectbluefin.io/administration#bluefin-gts) with developer tools ("DX image"),
   updated weekly
 - ``ghcr.io/rrenomeron/bluefin-dx-tr:stable`` -- Bluefin Stable with developer tools, updated
   weekly
 - ``ghcr.io/rrenomeron/bluefin-dx-tr:latest`` -- Bluefin Latest with developer tools, updated
   daily
-- ``ghcr.io/rrenomeron/bluefin-tr:gts`` -- **NO LONGER SUPPORTED** Bluefin GTS without developer tools, last
-  build was on May 20, 2025.  Use ``bootc switch`` to migrate to
-  ``ghcr.io/rrenomeron/bluefin-dx-tr:gts``, or if you don't want the developer tools, 
-  ``ghcr.io/ublue-os/bluefin:gts``.  The system will try to automatically migrate you to
-  ``bluefin-dx-tr:gts`` but your mileage may vary.
 
 ## Installation
 
