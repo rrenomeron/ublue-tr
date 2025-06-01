@@ -96,7 +96,6 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s
 ```bash
 cosign verify --key cosign.pub ghcr.io/rrenomeron/ublue-tr:gts
 cosign verify --key cosign.pub ghcr.io/rrenomeron/ublue-tr:latest
-cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-tr:gts
 cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:gts
 cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:stable
 cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:latest
@@ -104,7 +103,7 @@ cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:latest
 ## Building Locally
 
 ```
-bluebuild build --build-driver=podman [recipe file]
+./build-image.sh [recipe file]
 ```
 ## TODO
 
