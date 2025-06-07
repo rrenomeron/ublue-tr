@@ -24,7 +24,7 @@ modules:
       - bluefin-backgrounds
       - ublue-os-polkit-rules
       - ublue-os-signing
-      - ublue-os-brew
+      - ublue-brew
       - ublue-setup-services  
       - setools-console
       - lm_sensors
