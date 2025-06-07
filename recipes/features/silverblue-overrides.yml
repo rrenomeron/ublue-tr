@@ -18,11 +18,16 @@ modules:
       - ublue-os/packages
   install:
     packages:
+      # These are generally packages from Bluefin (DX)
+      # that we want, but aren't in the Silverblue image
       - gnome-shell-extension-logo-menu
       - bluefin-backgrounds
       - ublue-os-polkit-rules
       - ublue-os-signing
       - ublue-os-brew
       - ublue-setup-services  
+      - setools-console
+      - lm_sensors
+
 
 

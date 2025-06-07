@@ -7,6 +7,7 @@ modules:
     install:
       packages:
         - libvirt
+        - libvirt-nss
         - virt-manager
         - ublue-os-libvirt-workarounds
  
