@@ -22,7 +22,7 @@ modules:
       # that we want, but aren't in the Silverblue image
       - gnome-shell-extension-logo-menu
       - bluefin-backgrounds
-      - ublue-os-polkit-rules
+      - ublue-polkit-rules
       - ublue-os-signing
       - ublue-brew
       - ublue-setup-services  
