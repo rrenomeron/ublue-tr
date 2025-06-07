@@ -107,12 +107,10 @@ cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:latest
 ```
 ## TODO
 
-- Figure out what my development container workflow is going to look like (distrobox? toolbox?
-  something else?)
 - Fix ISO generation issues for better 1st run experience on a new device, leverage what Bluefin
   is doing if possible
 - Look at features from [Secure Blue](https://github.com/secureblue/secureblue) to incorporate
-- Re-evaluate some Bluefin choices we disagree with
+- Consider swapping in the CoreOS kernel like Bluefin does
 
 
 
