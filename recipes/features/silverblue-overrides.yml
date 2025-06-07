@@ -19,6 +19,10 @@ modules:
   install:
     packages:
       - gnome-shell-extension-logo-menu
-      - bluefin-backgrounds      
+      - bluefin-backgrounds
+      - ublue-os-polkit-rules
+      - ublue-os-signing
+      - ublue-os-brew
+      - ublue-setup-services  
 
 
