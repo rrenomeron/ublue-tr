@@ -18,3 +18,4 @@ modules:
         - fontawesome-fonts
         - libreoffice-opensymbol-fonts
         - intel-one-mono-fonts
+        - adwaita-fonts-all
