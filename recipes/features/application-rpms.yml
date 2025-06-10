@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
-  # Enable the Chrome repo already on the UBlue Silverblue image and fix the RPM GPG Pubkey issue.
+  # Enable the Chrome repo already on the UBlue Silverblue image.
   - type: script
     scripts:
       - enable-chrome-yum-repo.sh

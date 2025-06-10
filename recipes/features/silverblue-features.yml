@@ -10,6 +10,7 @@ modules:
   - from-file: features/docker.yml
   - from-file: features/cockpit.yml
   - from-file: features/fonts.yml
+  - from-file: features/gnome-ui-fixes-from-bluefin.yml
   - from-file: features/gnome-ui-fixes.yml
   - from-file: features/silverblue-overrides.yml
   - from-file: features/wallpaper.yml

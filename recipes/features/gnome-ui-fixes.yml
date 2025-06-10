@@ -1,17 +1,5 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
-  - type: dnf
-    repos:
-      copr:
-        - ublue-os/staging
-        - ublue-os/packages
-    install:
-      packages:    
-        - gnome-shell-extension-appindicator
-        - gnome-shell-extension-dash-to-dock 
-        - gnome-shell-extension-blur-my-shell
-        - gnome-tweaks
-
   - type: gschema-overrides  # this sets up our dconf overrides
     include:
       - zz1-tr-fedora.gschema.override
