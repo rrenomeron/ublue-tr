@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: bazzite-tr
 # description will be included in the image's metadata
-description: An Experimental Bazzite (Gnome) image with my personal preferences baked in.  This image follows Bazzite's stable-weekly image channel.
+description: Bazzite with my personal preferences baked in, including the GNOME desktop.  This bootable container image follows Bazzite's stable-weekly image channel.
 alt-tags:
   - stable
   - stable-weekly
@@ -16,6 +16,7 @@ modules:
   - from-file: features/system-files.yml
   - from-file: features/add-tr-ca.yml
   - from-file: features/application-rpms.yml
+  - from-file: features/google-chrome.yml
   - from-file: features/vscode.yml
   - from-file: features/cockpit.yml
   - from-file: features/fonts.yml

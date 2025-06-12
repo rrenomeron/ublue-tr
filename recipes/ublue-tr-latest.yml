@@ -1,7 +1,7 @@
 ## yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: ublue-tr
 # description will be included in the image's metadata
-description: A Universal Blue-based Fedora image with the latest version and my personal preferences baked in
+description: A Fedora Silverblue Bootable Container image with my personal preferences and Universal Blue improvements baked in
 
 alt-tags:
   - latest

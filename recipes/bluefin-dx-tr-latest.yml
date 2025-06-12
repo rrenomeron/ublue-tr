@@ -1,7 +1,7 @@
 ## yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: bluefin-dx-tr
 # description will be included in the image's metadata
-description: A Project Bluefin DX image with the latest Fedora and my personal preferences baked in
+description: Bluefin DX with my personal preferences baked in. This bootable container image follows Bluefin's latest image channel.
 alt-tags:
   - canary
   - latest

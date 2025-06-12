@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: bluefin-dx-tr
 # description will be included in the image's metadata
-description: A Project Bluefin DX image with my personal preferences baked in.  This image follows Bluefin's stable-weekly image channel.
+description: Bluefin DX with my personal preferences baked in. This bootable container image follows Bluefin's stable-weekly image channel.
 alt-tags:
   - stable
   - stable-weekly
