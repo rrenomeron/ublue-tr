@@ -61,9 +61,10 @@ modules:
         # Developer Tools
         - org.sqlitebrowser.sqlitebrowser 
         - io.dbeaver.DBeaverCommunity
-        - io.github.dvlv.boxbuddyrs
+        - com.ranfdev.DistroShelf
         - sh.loft.devpod
         - me.iepure.devtoolbox
         - io.podman_desktop.PodmanDesktop
 
-      remove: []
+      remove: 
+        - io.github.dvlv.boxbuddyrs
