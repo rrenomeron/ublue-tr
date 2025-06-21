@@ -9,4 +9,5 @@ modules:
         - gnome-shell-extension-system-monitor-applet
         - netcat
         - fastfetch
+        - clinfo
     
