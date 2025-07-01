@@ -7,6 +7,7 @@ modules:
   - from-file: features/application-rpms.yml
   - from-file: features/google-chrome.yml
   - from-file: features/fonts.yml
+  - from-file: features/gnome-ui-fixes.yml
   - from-file: features/bluefin-overrides.yml
   - from-file: features/wallpaper.yml
   - from-file: features/flatpaks.yml
