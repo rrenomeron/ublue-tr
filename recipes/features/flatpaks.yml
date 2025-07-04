@@ -46,6 +46,7 @@ modules:
         - com.github.PintaProject.Pinta
         - org.gnome.clocks
         - org.gnome.Connections
+        - org.virt_manager.virt-manager
 
         # Personal Internet Life
         - com.discordapp.Discord

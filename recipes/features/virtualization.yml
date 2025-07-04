@@ -8,7 +8,6 @@ modules:
       packages:
         - libvirt
         - libvirt-nss
-        - virt-manager
         - ublue-os-libvirt-workarounds
  
 
