@@ -11,4 +11,5 @@ modules:
         - cockpit-selinux
         - cockpit-storaged
         - cockpit-system
+        - cockpit-files
     
