@@ -8,12 +8,9 @@
 
 modules:
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+    configurations:
+    - notify: true 
+      scope: system
       install:
         # Base Flatpaks
         # (System Mgmt, Basic Productivity)
@@ -66,6 +63,3 @@ modules:
         - sh.loft.devpod
         - me.iepure.devtoolbox
         - io.podman_desktop.PodmanDesktop
-
-      remove: 
-        - io.github.dvlv.boxbuddyrs
