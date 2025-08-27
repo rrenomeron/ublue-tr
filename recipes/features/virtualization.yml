@@ -9,5 +9,6 @@ modules:
         - libvirt
         - libvirt-nss
         - ublue-os-libvirt-workarounds
+        - virt-manager
  
 
