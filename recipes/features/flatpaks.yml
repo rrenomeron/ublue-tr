@@ -16,6 +16,7 @@ modules:
         # (System Mgmt, Basic Productivity)
         - org.gtk.Gtk3theme.adw-gtk3
         - org.gtk.Gtk3theme.adw-gtk3-dark
+        - org.gnome.Firmware
         - io.missioncenter.MissionCenter
         - org.cockpit_project.CockpitClient
         - org.gnome.Logs
