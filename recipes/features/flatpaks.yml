@@ -38,6 +38,7 @@ modules:
         - us.zoom.Zoom
         - org.fedoraproject.MediaWriter
         - io.github.flattool.Warehouse
+        - io.github.kolunmi.Bazaar
         - org.gnome.SimpleScan
         - org.gustavoperedo.FontDownloader
         - org.gnome.NautilusPreviewer
