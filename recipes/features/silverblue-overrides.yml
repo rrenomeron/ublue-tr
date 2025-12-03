@@ -43,6 +43,13 @@ modules:
   remove:
     packages:
       - gnome-software
+- type: systemd
+  system:
+    enabled:
+      - uupd.timer
+    disabled:
+      - rpm-ostreed-automatic.timer
+      - flatpak-system-update.timer
 
 
 
