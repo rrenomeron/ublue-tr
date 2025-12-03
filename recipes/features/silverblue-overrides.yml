@@ -28,6 +28,21 @@ modules:
       - ublue-setup-services  
       - setools-console
       - lm_sensors
+      - firewall-config
+      - bluefin-schemas 
+      - ublue-polkit-rules
+      - ublue-motd
+      - uupd
+      - bcache-tools
+      - git-credential-libsecret
+      - openssh-askpass
+      - rclone
+      - restic
+      - powertop
+      - waypipe
+  remove:
+    packages:
+      - gnome-software
 
 
 

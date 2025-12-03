@@ -31,6 +31,7 @@ For the Silverblue Images (``ghcr.io/rrenomeron/ublue-tr``):
 - Appindicators enabled by default
 - Logo Menu enabled by default (like Bluefin)
 - Windows have minimize and maximize buttons (like Ubuntu and Bluefin)
+- Additional packages (e.g. Firewall GUI, rclone/restic, Universal Blue enhancements)
 - ``<CTRL><ALT>t`` opens a terminal
 
 For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-dx-tr``):
@@ -44,8 +45,8 @@ For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-dx-tr``):
 
 Fedora Silverblue:
 
-- ``ghcr.io/rrenomeron/ublue-tr:gts`` -- Fedora 41, updated weekly
-- ``ghcr.io/rrenomeron/ublue-tr:latest`` -- Fedora 42, updated daily
+- ``ghcr.io/rrenomeron/ublue-tr:gts`` -- Fedora 42, updated weekly
+- ``ghcr.io/rrenomeron/ublue-tr:latest`` -- Fedora 43, updated daily
 
 Bluefin (see 
 [Bluefin's docs](https://docs.projectbluefin.io/administration#upgrades-and-throttle-settings)
