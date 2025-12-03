@@ -23,6 +23,10 @@ modules:
   - from-file: features/gnome-ui-fixes.yml
   - from-file: features/wallpaper.yml
   - from-file: features/flatpaks.yml
+  - type: files
+    files:
+    - source: dconf-bluefin
+      destination: /etc/dconf/db/distro.d
   - type: script
     snippets: []
     scripts: 
