@@ -4,11 +4,16 @@ modules:
   files:
   - source: dconf-bluefin
     destination: /etc/dconf/db/distro.d
+- type: systemd
+  system:
+    disable:
+    # Disable VPNs we don't use
+    - tailscaled
+    # Disable the abomination known as rootful Docker
+    - docker.service
+    - docker.socket
+
 - type: script
   snippets:
-  # Disable VPNs we don't use
-  - "systemctl disable tailscaled"
-  # Disable the abomination known as rootful Docker
-  - "systemctl disable docker.service docker.socket"
   # Disable Starship by default
   - "sed -i '/starship init bash/d' /etc/bashrc"

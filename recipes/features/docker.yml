@@ -10,8 +10,10 @@ modules:
         - docker-ce-cli
         - docker-buildx-plugin
         - docker-compose-plugin
-  - type: script
-    snippets:
+  - type: systemd
+    system:
+      disable:
       # Disable the abomination known as rootful Docker
-      - "systemctl disable docker.service docker.socket"
+      - docker.service
+      - docker.socket
 
