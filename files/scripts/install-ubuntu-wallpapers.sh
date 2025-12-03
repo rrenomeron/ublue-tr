@@ -14,7 +14,7 @@ wget https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ubuntu-wallpaper
 tar xvzf ubuntu-wallpapers_24.04.2.orig.tar.gz 
 cd ubuntu-wallpapers_24.04.2.orig
 
-UBUNTU_RELEASES="focal bionic xenial trusty precise lucid jammy"
+UBUNTU_RELEASES="noble mantic jammy focal bionic artful xenial trusty precise lucid"
 rm -rf staging_area && mkdir staging_area
 for UBUNTU_VERSION in $UBUNTU_RELEASES; do
     cat debian/ubuntu-wallpapers-$UBUNTU_VERSION.install | grep -v .xml | grep -v '^$' \
