@@ -27,6 +27,9 @@ modules:
     files:
     - source: dconf-bluefin
       destination: /etc/dconf/db/distro.d
+  - type: gnome-extensions
+    install:
+      - Dash to Dock
   - type: script
     snippets: []
     scripts: 
