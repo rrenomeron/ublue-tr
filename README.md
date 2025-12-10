@@ -1,13 +1,13 @@
-# Custom Bluefin and Fedora Silverblue Bootable Containers
+# Custom Fedora-Based Bootable Containers
 
 These are [Bootable Container](https://containers.github.io/bootable/) images built from 
 [Universal Blue](https://universal-blue.org) base images
 with [BlueBuild](https://bulue-build.org)'s tools.
-The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) or 
-[Bluefin](https://projectbluefin.io) operating
+The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) 
+[Bluefin](https://projectbluefin.io), or [Bazzite](https://bazzite.gg) operating
 system with with my personal preferences baked in.  The image based on Bluefin DX (``bluefin-dx-tr``) is my daily driver.
 
-Modifications common to both images:
+Modifications common to all images:
 
 - Google Chrome RPM installed and set as default browser
 - [Variety](https://peterlevi.com/variety/) wallpaper changer (installed as RPM for now)
@@ -41,6 +41,11 @@ For the Bluefin Images (``ghcr.io/rrenomeron/bluefin-dx-tr``):
   [rootless Docker](https://docs.docker.com/engine/security/rootless/) for themselves.
 - A different list of default flatpaks
 
+For the Bazzite Image (``ghcr.io/rrenomeron/bazzite-tr``)
+
+- GNOME desktop with simliar UI to the other images
+- Developer mode enabled (i.e. based on ``bazzite-dx-gnome``)
+
 ## Which Image? Which Version?
 
 Fedora Silverblue:
@@ -58,6 +63,8 @@ for more details):
   weekly
 - ``ghcr.io/rrenomeron/bluefin-dx-tr:latest`` -- Bluefin Latest with developer tools, updated
   daily
+
+Bazzite: ``ghcr.io/rrenomeron/bazzite-tr`` -- Bazzite DX GNOME stable, updated weekly
 
 ## Installation
 
@@ -100,6 +107,7 @@ cosign verify --key cosign.pub ghcr.io/rrenomeron/ublue-tr:latest
 cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:gts
 cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:stable
 cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:latest
+cosign verify --key cosign.pub ghcr.io/rrenomeron/bazzite-tr
 ```
 ## Building Locally
 
@@ -111,7 +119,7 @@ cosign verify --key cosign.pub ghcr.io/rrenomeron/bluefin-dx-tr:latest
 - Fix ISO generation issues for better 1st run experience on a new device, leverage what Bluefin
   is doing if possible
 - Look at features from [Secure Blue](https://github.com/secureblue/secureblue) to incorporate
-- Consider swapping in the CoreOS kernel like Bluefin does
+- Consider swapping in the CoreOS kernel like Bluefin does (on Silverblue images)
 
 
 

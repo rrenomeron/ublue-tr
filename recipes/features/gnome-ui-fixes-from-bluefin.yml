@@ -1,4 +1,6 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+# Note: this should not be used with the Universal Blue end-user images, since they 
+# have switched from shipping Gnome extensions in RPMs from Fedora
 modules:
   - type: dnf
     repos:

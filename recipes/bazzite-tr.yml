@@ -7,7 +7,7 @@ alt-tags:
   - stable-weekly
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-gnome
+base-image: ghcr.io/ublue-os/bazzite-dx-gnome
 image-version: stable
 
 # module configuration, executed in order
@@ -17,7 +17,6 @@ modules:
   - from-file: features/add-tr-ca.yml
   - from-file: features/application-rpms.yml
   - from-file: features/google-chrome.yml
-  - from-file: features/vscode.yml
   - from-file: features/cockpit.yml
   - from-file: features/fonts.yml
   - from-file: features/gnome-ui-fixes.yml
@@ -30,7 +29,7 @@ modules:
   - type: gnome-extensions
     install:
       - Dash to Dock
-  - type: script
-    snippets: []
-    scripts: 
-      - bazzite-disable-steam-autostart.sh
+  # - type: script
+    # snippets: []
+    # scripts: 
+    #   - bazzite-disable-steam-autostart.sh
