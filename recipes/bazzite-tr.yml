@@ -29,7 +29,7 @@ modules:
   - type: gnome-extensions
     install:
       - Dash to Dock
-  # - type: script
-    # snippets: []
-    # scripts: 
-    #   - bazzite-disable-steam-autostart.sh
+  - type: script
+    snippets: []
+    scripts: 
+      - bazzite-disable-steam-autostart.sh

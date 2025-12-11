@@ -3,7 +3,7 @@
 These are [Bootable Container](https://containers.github.io/bootable/) images built from 
 [Universal Blue](https://universal-blue.org) base images
 with [BlueBuild](https://bulue-build.org)'s tools.
-The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org) 
+The images contain either the [Fedora Silverblue](https://silverblue.fedoraproject.org),
 [Bluefin](https://projectbluefin.io), or [Bazzite](https://bazzite.gg) operating
 system with with my personal preferences baked in.  The image based on Bluefin DX (``bluefin-dx-tr``) is my daily driver.
 
@@ -19,6 +19,7 @@ Modifications common to all images:
 - Sort directories first in Nautilus and GTK file choosers
 - Dark styles enabled by default
 - [System76 wallpaper collection](https://system76.com/merch/desktop-wallpapers)
+- [Framework 12](https://frame.work/laptop12) wallpapers
 - Historical Ubuntu wallpapers, mostly from the LTS versions
 - [Intel One Mono](https://www.intel.com/content/www/us/en/company-overview/one-monospace-font.html) set as default monospace font
 
@@ -45,6 +46,7 @@ For the Bazzite Image (``ghcr.io/rrenomeron/bazzite-tr``)
 
 - GNOME desktop with simliar UI to the other images
 - Developer mode enabled (i.e. based on ``bazzite-dx-gnome``)
+- Steam does not autostart on login
 
 ## Which Image? Which Version?
 
