@@ -5,3 +5,6 @@ modules:
     files:
       - source: system
         destination: /
+  - type: script
+    scripts:
+      - add-bootc-images-sigstore-key.sh
