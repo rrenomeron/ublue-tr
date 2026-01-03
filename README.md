@@ -1,7 +1,7 @@
 # Custom Fedora-Based Bootable Containers
 
 > [!NOTE]
-> This repository is deprecated and will be archived soon.  The images that used
+> This repository is no longer updated.  The images that used
 > to be built here can be found at [``bootc-images``](https://github.com/rrenomeron/bootc-images)
 
 These are [Bootable Container](https://containers.github.io/bootable/) images built from 
